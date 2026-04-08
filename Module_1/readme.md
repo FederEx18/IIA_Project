@@ -83,6 +83,13 @@ python Module_1/rules_engine.py
 python Module_1/bayes_alerts.py
 ```
 
+Windows (recommended in this repository setup):
+
+```bash
+.\.venv\Scripts\python.exe Module_1/rules_engine.py
+.\.venv\Scripts\python.exe Module_1/bayes_alerts.py
+```
+
 
 ## Optional Custom Inputs/Outputs
 
@@ -101,4 +108,9 @@ python Module_1/bayes_alerts.py --input Module_1/outputs/preprocessed_for_rules.
 2. `rules_engine.py` executable from project root.
 3. `bayes_alerts.py` executable from project root.
 4. Output files generated in `Module_1/outputs`.
+
+## Notebook Roles
+
+1. `eda1.ipynb` - exploratory data analysis and preprocessing decisions.
+2. `dev.ipynb` - Module 1 execution flow, validation, and critical discussion.
 

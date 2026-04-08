@@ -3,6 +3,7 @@ drop_duplicates,removed=0
 missing_threshold,threshold=75.0%
 columns_over_threshold,"O3, PM10, PM2.5, SO2, pressure_hpa, wind_speed_kmh, wind_direction_deg, precipitation_mm, NMHC"
 columns_dropped,"pressure_hpa, wind_direction_deg, NMHC"
+columns_kept_due_to_critical,"O3, PM10, PM2.5, SO2, wind_speed_kmh, precipitation_mm"
 protected_features,"CO, CO_8h_avg, NO2, O3, PM10, PM2.5, SO2, air_quality_good, city, datetime, humidity_percent, month, precipitation_mm, temperature_c, wind_speed_kmh, year"
 co_8h_avg,"rolling=8, min_periods=6, by=city"
 outlier_method,"IQR (1.5*IQR), detection only"
