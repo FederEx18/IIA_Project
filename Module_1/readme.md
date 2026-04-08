@@ -2,84 +2,79 @@
 
 ## Scope
 
-This folder implements the first deliverable of the project:
+This folder contains the Module 1 deliverable:
 
-1. A rule-based inference engine.
-2. A Bayesian network with inference by enumeration.
-3. A rule knowledge base in JSON.
+1. Rule-based inference engine.
+2. Bayesian network with inference by enumeration.
+3. JSON knowledge base for alert rules.
 
-## Files
+## Main Files
 
 1. `regras.json`
-- Active rule base (Claude-style schema).
+- Rule base used by the symbolic engine.
 - Includes `rules`, `risk_levels`, and `metadata`.
-- Rules include normative references in each consequence.
 
 2. `rules_engine.py`
-- Reads the dataset and applies symbolic rules row by row.
-- Supports both schemas:
-  - legacy `conditions` list.
-  - advanced `condition` with `simple_threshold`, `range`, `compound_and`, `compound_or`.
-- Writes enriched output with triggered rules, overall risk, and actions.
+- Reads a semicolon-separated CSV dataset.
+- Applies symbolic rules row by row.
+- Supports both rule schemas:
+  - legacy `conditions` list
+  - structured `condition` (`simple_threshold`, `range`, `compound_and`, `compound_or`)
+- Writes enriched output with matched rules, risk level, and recommended actions.
 
 3. `bayes_alerts.py`
 - Implements a 4-node Bayesian network.
 - Uses exact inference by enumeration.
-- Outputs posterior probabilities for fire risk.
+- Writes posterior probabilities for fire risk.
 
 4. `rules_sources.md`
-- Source mapping and caveats for rule thresholds.
+- Sources and caveats for threshold definitions.
 
-## Input and Outputs
+5. `dev.ipynb` and `eda1.ipynb`
+- Notebook support for EDA, preprocessing checks, and evaluation/report material.
 
-### Input
+## Default Input and Output Paths
 
-- `../data/processed_lisboa_porto_air_quality.csv`
+From project root, the scripts use:
 
-### Outputs
+1. Input CSV (both scripts)
+- `data/processed_lisboa_porto_air_quality.csv`
+
+2. Rules engine output
+- `Module_1/outputs/rules_inference_output.csv`
+
+3. Bayesian output
+- `Module_1/outputs/bayes_inference_output.csv`
+
+## Output Columns Added
 
 1. `rules_inference_output.csv`
-- Original columns plus:
-  - `CO_8h_avg`
-  - `matched_rule_ids`
-  - `matched_rule_names`
-  - `overall_risk`
-  - `recommended_actions`
+- `CO_8h_avg`
+- `matched_rule_ids`
+- `matched_rule_names`
+- `overall_risk`
+- `recommended_actions`
 
 2. `bayes_inference_output.csv`
-- Original columns plus:
-  - `p_fire_risk_true`
-  - `p_fire_risk_false`
+- `p_fire_risk_true`
+- `p_fire_risk_false`
 
-## Actual preprocessing implemented
+## Preprocessing Logic Implemented in Code
 
-The implementation currently performs:
+Current runtime preprocessing behavior:
 
-1. Numeric parsing with safe handling of missing values.
-2. Feature aliasing for rule compatibility (`PM2_5` -> `PM2.5`).
-3. `CO_8h_avg` derivation in `rules_engine.py`:
+1. Safe numeric parsing (empty/invalid values become missing).
+2. Feature alias handling for rule compatibility (`PM2_5` -> `PM2.5`).
+3. `CO_8h_avg` created in `rules_engine.py`:
 - Rolling window of 8 rows per city.
-- Minimum 6 valid CO values to compute mean.
-- Empty value when insufficient data.
+- Requires at least 6 valid CO values.
+- Leaves empty value if insufficient data.
 
-Important:
-- There is no global row drop.
-- If a rule needs a missing variable, that condition evaluates to false.
+Notes:
+- No global row removal is performed inside the scripts.
+- If a rule depends on a missing variable, that condition evaluates to `False`.
 
-Notebook alignment:
-1. `eda1.ipynb` now includes an explicit preprocessing section with:
-- duplicate removal,
-- missing-threshold filtering (>75%, with critical-feature keep list),
-- CO_8h_avg derivation,
-- IQR outlier detection,
-- z-score normalization copy.
-2. The notebook exports:
-- `preprocessed_for_rules.csv`
-- `preprocessed_with_zscores.csv`
-- `preprocessing_decisions.csv`
-3. `rules_engine.py` remains the operational inference pipeline.
-
-## How to run
+## How to Run
 
 From project root:
 
@@ -88,38 +83,22 @@ python Module_1/rules_engine.py
 python Module_1/bayes_alerts.py
 ```
 
-Optional quick tests:
+
+## Optional Custom Inputs/Outputs
+
+Both scripts support CLI overrides.
+
+Example using a notebook-generated preprocessed file:
 
 ```bash
-python Module_1/rules_engine.py --limit 300
-python Module_1/bayes_alerts.py --limit 300
-python Module_1/bayes_alerts.py --row-index 0
+python Module_1/rules_engine.py --input Module_1/outputs/preprocessed_for_rules.csv --output Module_1/outputs/rules_inference_output.csv
+python Module_1/bayes_alerts.py --input Module_1/outputs/preprocessed_for_rules.csv --output Module_1/outputs/bayes_inference_output.csv
 ```
 
-## Consistency notes
+## Delivery Checklist (Module 1)
 
-1. Rule thresholds are normative-oriented (EU/WHO/IPMA).
-2. Some extreme-event rules may trigger rarely (or not at all) in this dataset.
-3. This behavior is expected for emergency alert logic and is documented in `rules_sources.md`.
+1. `regras.json` present and loadable.
+2. `rules_engine.py` executable from project root.
+3. `bayes_alerts.py` executable from project root.
+4. Output files generated in `Module_1/outputs`.
 
-## Deliverable checklist (Module 1)
-
-1. `regras.json`: present and operational.
-2. `rules_engine.py`: implemented and executable.
-3. `bayes_alerts.py`: implemented and executable.
-4. Output artifacts generated by execution: present.
-
-## Detailed report material (Claude bundle)
-
-For long-form academic write-up, use the files under `Module_1/claude`:
-
-1. `Module_1/claude/1_auditoria_dados.md`
-2. `Module_1/claude/2_regras_conhecimento.md`
-3. `Module_1/claude/3_rede_bayesiana.md`
-4. `Module_1/claude/4_criterios_validacao.md`
-5. `Module_1/claude/5_texto_relatorio.md`
-6. `Module_1/claude/6_bibliografia_sumario.md`
-
-These files are complementary to this README:
-1. This README describes the implemented code state.
-2. The Claude files provide expanded narrative for the final report.

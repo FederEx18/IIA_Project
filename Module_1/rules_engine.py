@@ -30,6 +30,14 @@ RISK_ALIASES = {
 }
 
 
+def build_city_window() -> deque[float | None]:
+	"""Factory for rolling CO windows used by defaultdict.
+
+	This helper exists to avoid lambda usage and keep behavior explicit.
+	"""
+	return deque(maxlen=8)
+
+
 def parse_float(value: Any) -> float | None:
 	"""Convert raw value to float; return None for empty/invalid values."""
 	if value is None:
@@ -73,9 +81,26 @@ def get_row_value(row: dict[str, str], variable: str) -> float | None:
 	return parse_float(row.get(column))
 
 
+def compare_numeric(observed: float, operator: str, threshold: float) -> bool:
+	"""Evaluate a numeric comparison in a fully explicit way."""
+	if operator == ">":
+		return observed > threshold
+	if operator == ">=":
+		return observed >= threshold
+	if operator == "<":
+		return observed < threshold
+	if operator == "<=":
+		return observed <= threshold
+	if operator == "==":
+		return observed == threshold
+	if operator == "!=":
+		return observed != threshold
+	raise ValueError(f"Unsupported operator: {operator}")
+
+
 def add_co_8h_average(rows: list[dict[str, str]]) -> None:
 	"""Add CO_8h_avg using rolling 8-row window per city (min 6 valid values)."""
-	windows: dict[str, deque[float | None]] = defaultdict(lambda: deque(maxlen=8))
+	windows: dict[str, deque[float | None]] = defaultdict(build_city_window)
 
 	for row in rows:
 		city = row.get("city", "") or "__global__"
@@ -84,9 +109,13 @@ def add_co_8h_average(rows: list[dict[str, str]]) -> None:
 		co_value = parse_float(row.get("CO"))
 		window.append(co_value)
 
-		valid = [v for v in window if v is not None]
-		if len(valid) >= 6:
-			row["CO_8h_avg"] = f"{sum(valid) / len(valid):.6f}"
+		valid_values: list[float] = []
+		for value in window:
+			if value is not None:
+				valid_values.append(value)
+
+		if len(valid_values) >= 6:
+			row["CO_8h_avg"] = f"{sum(valid_values) / len(valid_values):.6f}"
 		else:
 			row["CO_8h_avg"] = ""
 
@@ -102,24 +131,11 @@ def evaluate_condition(row: dict[str, str], condition: dict[str, Any]) -> bool:
 	if observed is None:
 		return False
 
-	if operator == ">":
-		return observed > threshold
-	if operator == ">=":
-		return observed >= threshold
-	if operator == "<":
-		return observed < threshold
-	if operator == "<=":
-		return observed <= threshold
-	if operator == "==":
-		return observed == threshold
-	if operator == "!=":
-		return observed != threshold
-
-	raise ValueError(f"Unsupported operator: {operator}")
+	return compare_numeric(observed, operator, threshold)
 
 
 def evaluate_condition_v2(row: dict[str, str], condition: dict[str, Any]) -> bool:
-	"""Evaluate Claude-style conditions (simple/range/compound)."""
+	"""Evaluate structured conditions (simple threshold, range, AND, OR)."""
 	cond_type = condition.get("type")
 
 	if cond_type == "simple_threshold":
@@ -133,19 +149,7 @@ def evaluate_condition_v2(row: dict[str, str], condition: dict[str, Any]) -> boo
 		if observed is None:
 			return False
 
-		if operator == ">":
-			return observed > threshold
-		if operator == ">=":
-			return observed >= threshold
-		if operator == "<":
-			return observed < threshold
-		if operator == "<=":
-			return observed <= threshold
-		if operator == "==":
-			return observed == threshold
-		if operator == "!=":
-			return observed != threshold
-		raise ValueError(f"Unsupported operator: {operator}")
+		return compare_numeric(observed, operator, threshold)
 
 	if cond_type == "range":
 		variable = condition["variable"]
@@ -162,13 +166,19 @@ def evaluate_condition_v2(row: dict[str, str], condition: dict[str, Any]) -> boo
 
 	if cond_type == "compound_and":
 		children = condition.get("conditions", [])
-		return all(evaluate_condition_v2(row, child) for child in children)
+		for child in children:
+			if not evaluate_condition_v2(row, child):
+				return False
+		return True
 
 	if cond_type == "compound_or":
 		children = condition.get("conditions", [])
-		return any(evaluate_condition_v2(row, child) for child in children)
+		for child in children:
+			if evaluate_condition_v2(row, child):
+				return True
+		return False
 
-	# Backward-compatible handling for old shape nested inside v2.
+	# Keep backward compatibility if a legacy condition appears here.
 	if "variable" in condition and "operator" in condition and "value" in condition:
 		legacy_condition = {
 			"feature": condition["variable"],
@@ -181,32 +191,18 @@ def evaluate_condition_v2(row: dict[str, str], condition: dict[str, Any]) -> boo
 
 
 def rule_matches(row: dict[str, str], rule: dict[str, Any]) -> bool:
-	"""Evaluate either legacy rules or Claude-style rules."""
+	"""Check if one rule is true for the current row."""
 	if "conditions" in rule:
-		return all(evaluate_condition(row, condition) for condition in rule["conditions"])
+		# Legacy format: a list where all conditions must be true.
+		conditions = rule["conditions"]
+		for condition in conditions:
+			if not evaluate_condition(row, condition):
+				return False
+		return True
 	if "condition" in rule:
+		# Structured format: nested condition tree.
 		return evaluate_condition_v2(row, rule["condition"])
 	raise ValueError("Rule has neither 'conditions' nor 'condition'")
-
-
-def aggregate_risk(matched_rules: list[dict[str, Any]]) -> str:
-	"""Return the highest risk level among matched rules."""
-	if not matched_rules:
-		return "none"
-	return max(matched_rules, key=lambda x: RISK_ORDER.get(x["risk_level"], 0))["risk_level"]
-
-
-def collect_actions(matched_rules: list[dict[str, Any]]) -> list[str]:
-	"""Collect unique actions, ordered by rule priority (high to low)."""
-	actions: list[str] = []
-	seen: set[str] = set()
-	ordered = sorted(matched_rules, key=lambda x: x.get("priority", 0), reverse=True)
-	for rule in ordered:
-		for action in rule.get("actions", []):
-			if action not in seen:
-				actions.append(action)
-				seen.add(action)
-	return actions
 
 
 def load_rules(path: Path) -> list[dict[str, Any]]:
@@ -222,18 +218,22 @@ def load_rules(path: Path) -> list[dict[str, Any]]:
 
 
 def get_rule_id(rule: dict[str, Any]) -> str:
+	"""Return rule id, or a safe fallback if missing."""
 	return str(rule.get("id", "unknown_rule"))
 
 
 def get_rule_name(rule: dict[str, Any]) -> str:
+	"""Return a human-readable rule name used in outputs."""
 	return str(rule.get("name", rule.get("description", get_rule_id(rule))))
 
 
 def get_rule_priority(rule: dict[str, Any]) -> int:
+	"""Return priority used to sort matched rules (higher first)."""
 	return int(rule.get("priority", 0))
 
 
 def get_rule_risk_level(rule: dict[str, Any]) -> str:
+	"""Read risk level from either legacy or structured rule format."""
 	if "risk_level" in rule:
 		return normalize_risk_level(str(rule.get("risk_level")))
 	consequence = rule.get("consequence", {})
@@ -243,35 +243,92 @@ def get_rule_risk_level(rule: dict[str, Any]) -> str:
 
 
 def get_rule_actions(rule: dict[str, Any]) -> list[str]:
+	"""Return action messages from a rule in a consistent list format."""
 	if "actions" in rule and isinstance(rule["actions"], list):
-		return [str(action) for action in rule["actions"]]
+		actions: list[str] = []
+		for action in rule["actions"]:
+			actions.append(str(action))
+		return actions
 	consequence = rule.get("consequence", {})
 	if isinstance(consequence, dict) and consequence.get("action"):
 		return [str(consequence["action"])]
 	return []
 
 
-def infer_for_row(row: dict[str, str], rules: list[dict[str, Any]]) -> dict[str, Any]:
-	"""Run rule inference for one row and return output fields."""
-	matched = [rule for rule in rules if rule_matches(row, rule)]
-	matched_sorted = sorted(matched, key=get_rule_priority, reverse=True)
-	matched_risks = [get_rule_risk_level(rule) for rule in matched_sorted]
-	risk = "none"
-	if matched_risks:
-		risk = max(matched_risks, key=lambda x: RISK_ORDER.get(x, 0))
+def collect_matched_rules(row: dict[str, str], rules: list[dict[str, Any]]) -> list[dict[str, Any]]:
+	"""Return every rule that matches the current row."""
+	matched: list[dict[str, Any]] = []
+	for rule in rules:
+		if rule_matches(row, rule):
+			matched.append(rule)
+	return matched
 
+
+def sort_rules_by_priority(rules: list[dict[str, Any]]) -> list[dict[str, Any]]:
+	"""Sort rules by priority in descending order without lambda."""
+	def priority_key(rule: dict[str, Any]) -> int:
+		return get_rule_priority(rule)
+
+	return sorted(rules, key=priority_key, reverse=True)
+
+
+def determine_highest_risk(sorted_rules: list[dict[str, Any]]) -> str:
+	"""Pick the maximum risk level from matched rules."""
+	highest_risk = "none"
+	highest_rank = RISK_ORDER.get("none", 0)
+
+	for rule in sorted_rules:
+		risk_level = get_rule_risk_level(rule)
+		rank = RISK_ORDER.get(risk_level, 0)
+		if rank > highest_rank:
+			highest_rank = rank
+			highest_risk = risk_level
+
+	return highest_risk
+
+
+def collect_unique_actions(sorted_rules: list[dict[str, Any]]) -> list[str]:
+	"""Collect actions in priority order without duplicates."""
 	actions: list[str] = []
 	seen: set[str] = set()
-	for rule in matched_sorted:
-		for action in get_rule_actions(rule):
+
+	for rule in sorted_rules:
+		rule_actions = get_rule_actions(rule)
+		for action in rule_actions:
 			if action not in seen:
 				actions.append(action)
 				seen.add(action)
 
+	return actions
+
+
+def join_rule_ids(sorted_rules: list[dict[str, Any]]) -> str:
+	"""Join matched rule IDs into a pipe-separated string."""
+	rule_ids: list[str] = []
+	for rule in sorted_rules:
+		rule_ids.append(get_rule_id(rule))
+	return "|".join(rule_ids)
+
+
+def join_rule_names(sorted_rules: list[dict[str, Any]]) -> str:
+	"""Join matched rule names into a pipe-separated string."""
+	rule_names: list[str] = []
+	for rule in sorted_rules:
+		rule_names.append(get_rule_name(rule))
+	return "|".join(rule_names)
+
+
+def infer_for_row(row: dict[str, str], rules: list[dict[str, Any]]) -> dict[str, Any]:
+	"""Run rule inference for one row and return output fields."""
+	matched_rules = collect_matched_rules(row, rules)
+	matched_sorted = sort_rules_by_priority(matched_rules)
+	overall_risk = determine_highest_risk(matched_sorted)
+	actions = collect_unique_actions(matched_sorted)
+
 	return {
-		"matched_rule_ids": "|".join(get_rule_id(rule) for rule in matched_sorted),
-		"matched_rule_names": "|".join(get_rule_name(rule) for rule in matched_sorted),
-		"overall_risk": risk,
+		"matched_rule_ids": join_rule_ids(matched_sorted),
+		"matched_rule_names": join_rule_names(matched_sorted),
+		"overall_risk": overall_risk,
 		"recommended_actions": " | ".join(actions),
 	}
 
@@ -311,14 +368,17 @@ def run_inference(
 			if limit is not None and processed >= limit:
 				break
 
+			# Compute fields produced by the rule engine for this row.
 			result = infer_for_row(row, rules)
 			row.update(result)
 			rows_to_write.append(row)
 
 			if result["matched_rule_ids"]:
+				# Track rule frequency for an execution summary.
 				for rule_id in result["matched_rule_ids"].split("|"):
 					if rule_id:
 						rule_counter[rule_id] += 1
+			# Track risk distribution for the same summary.
 			risk_counter[result["overall_risk"]] += 1
 			processed += 1
 
@@ -332,7 +392,12 @@ def run_inference(
 	print(f"Output written to: {output_csv}")
 	# Print a small execution summary for report/debug usage.
 	print("Risk distribution:")
-	for risk, count in sorted(risk_counter.items(), key=lambda x: RISK_ORDER.get(x[0], -1), reverse=True):
+
+	def risk_sort_key(item: tuple[str, int]) -> int:
+		risk_level = item[0]
+		return RISK_ORDER.get(risk_level, -1)
+
+	for risk, count in sorted(risk_counter.items(), key=risk_sort_key, reverse=True):
 		print(f"  {risk}: {count}")
 
 	print("Most triggered rules:")

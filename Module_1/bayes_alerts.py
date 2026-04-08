@@ -21,7 +21,11 @@ class BayesNode:
 
 	def p_true(self, evidence: dict[str, bool]) -> float:
 		"""Return P(node=True | parent assignments from evidence)."""
-		key = tuple(evidence[parent] for parent in self.parents)
+		# Build CPT key in parent order using explicit loop for readability.
+		key_values: list[bool] = []
+		for parent in self.parents:
+			key_values.append(evidence[parent])
+		key = tuple(key_values)
 		return self.cpt[key]
 
 
@@ -29,7 +33,10 @@ class BayesNetwork:
 	"""Container for nodes and a fast name-to-node lookup."""
 	def __init__(self, nodes: list[BayesNode]) -> None:
 		self.nodes = nodes
-		self.by_name = {node.name: node for node in nodes}
+		# Build node lookup explicitly to keep the flow easy to follow.
+		self.by_name: dict[str, BayesNode] = {}
+		for node in nodes:
+			self.by_name[node.name] = node
 
 
 def normalize(distribution: dict[bool, float]) -> dict[bool, float]:
@@ -37,7 +44,11 @@ def normalize(distribution: dict[bool, float]) -> dict[bool, float]:
 	total = sum(distribution.values())
 	if total == 0:
 		return distribution
-	return {k: v / total for k, v in distribution.items()}
+
+	normalized: dict[bool, float] = {}
+	for key, value in distribution.items():
+		normalized[key] = value / total
+	return normalized
 
 
 def enumerate_all(variables: list[str], evidence: dict[str, bool], bn: BayesNetwork) -> float:
@@ -69,7 +80,10 @@ def enumerate_all(variables: list[str], evidence: dict[str, bool], bn: BayesNetw
 def enumeration_ask(query_var: str, evidence: dict[str, bool], bn: BayesNetwork) -> dict[bool, float]:
 	"""Compute posterior distribution for query_var given evidence."""
 	dist: dict[bool, float] = {}
-	variables = [node.name for node in bn.nodes]
+	variables: list[str] = []
+	for node in bn.nodes:
+		variables.append(node.name)
+	# Evaluate both query values and normalize at the end.
 	for value in (True, False):
 		extended = dict(evidence)
 		extended[query_var] = value
@@ -121,6 +135,7 @@ def evidence_from_row(row: dict[str, str]) -> dict[str, bool]:
 	wind = parse_float(row.get("wind_speed_kmh"))
 
 	evidence: dict[str, bool] = {}
+	# These simple thresholds convert numeric data into true/false evidence.
 	# If a feature is missing, we simply leave that evidence variable unknown.
 	if temp is not None:
 		evidence["heatwave"] = temp >= 30
@@ -135,10 +150,12 @@ def infer_for_row(row: dict[str, str], bn: BayesNetwork) -> dict[str, float]:
 	"""Return posterior probabilities for one row."""
 	evidence = evidence_from_row(row)
 	posterior = enumeration_ask("fire_risk", evidence, bn)
-	return {
-		"p_fire_risk_true": posterior[True],
-		"p_fire_risk_false": posterior[False],
-	}
+
+	# Keep output keys explicit for easy CSV writing.
+	result: dict[str, float] = {}
+	result["p_fire_risk_true"] = posterior[True]
+	result["p_fire_risk_false"] = posterior[False]
+	return result
 
 
 def run_batch(input_csv: Path, output_csv: Path, limit: int | None = None) -> None:
@@ -155,6 +172,7 @@ def run_batch(input_csv: Path, output_csv: Path, limit: int | None = None) -> No
 			# Optional limit for fast debug runs.
 			if limit is not None and count >= limit:
 				break
+			# Infer probabilities and append them to the same row.
 			probs = infer_for_row(row, bn)
 			row["p_fire_risk_true"] = f"{probs['p_fire_risk_true']:.4f}"
 			row["p_fire_risk_false"] = f"{probs['p_fire_risk_false']:.4f}"
