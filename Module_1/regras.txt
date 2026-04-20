@@ -1,0 +1,13 @@
+Condição; Risco ;Ação
+1. NO2 >= 200 ug/m3; Poluição atmosférica crítica por NO2; Limitar tráfego automóvel. Grupos sensíveis evitem exposição prolongada.
+2. 100 <= NO2 < 200 ug/m3; Poluição atmosférica moderada por NO2; Monitorizar evolução. Sensíveis reduzam atividade ao ar livre.
+3. PM10 >= 50 ug/m3; Poluição por partículas inaláveis PM10; Evitar exercício ao ar livre. Fechar janelas em ambientes internos.
+4. PM2.5 >= 25 ug/m3; Poluição por partículas finas PM2.; Grupos sensíveis permaneçam em ambientes internos. Usar máscara FFP2 se necessário.
+5. O3 >= 180 ug/m3; Episódio de ozono troposférico; Evitar atividade física intensa ao ar livre entre as 14h e as 20h.
+6. CO_8h_avg >= 10 mg/m3; Exposição elevada a monóxido de carbono; Evitar túneis e vias de tráfego intenso. Ventilar ambientes.
+7. SO2 >= 350 ug/m3; Poluição crítica por dióxido de enxofre; Asmáticos evitem exposição. Investigar fonte de emissão.
+8. temperature_c >= 40 ºC; Onda de calor extrema; Ativar plano de contingência para calor extremo.
+9. temperature_c >= 35 e humidity_percent <= 30; Incêndio florestal; Proibir queimadas e reforçar vigilância contra incêndio.
+10. wind_speed_kmh >= 75 km/h; Vento forte / risco meteorológico; Alerta de vento forte. Evitar deslocações e zonas com árvores/estruturas frágeis.
+11. precipitation_mm >= 10 mm/h; Inundação urbana / precipitação intensa; Risco de inundações em zonas baixas. Evitar viajar.
+12. (NO2 >= 150 ou PM10 >= 40 ou PM2.5 >= 20) e humidity_percent >= 80; Episódio severo de má qualidade do ar; Qualidade do ar muito degradada. Grupos de risco devem evitar sair.
