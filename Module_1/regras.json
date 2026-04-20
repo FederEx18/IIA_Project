@@ -1,0 +1,314 @@
+{
+  "rules": [
+    {
+      "id": "R01_NO2_ALTO",
+      "description": "Alerta NO2 critico - limite horario UE",
+      "priority": 10,
+      "condition": {
+        "type": "simple_threshold",
+        "variable": "NO2",
+        "operator": ">=",
+        "threshold": 200,
+        "unit": "ug/m3"
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "air_quality",
+        "action": "Limitar trafego automovel. Grupos sensiveis evitem exposicao prolongada.",
+        "rationale": "Violacao limite horario Diretiva 2008/50/CE",
+        "source": "Diretiva 2008/50/CE, Anexo XI"
+      }
+    },
+    {
+      "id": "R02_NO2_MODERADO",
+      "description": "Alerta NO2 preventivo",
+      "priority": 5,
+      "condition": {
+        "type": "range",
+        "variable": "NO2",
+        "min": 100,
+        "max": 200,
+        "unit": "ug/m3"
+      },
+      "consequence": {
+        "risk_level": "MODERADO",
+        "risk_code": 2,
+        "category": "air_quality",
+        "action": "Monitorizar evolucao. Sensiveis reduzam atividade ao ar livre.",
+        "rationale": "50% do limite horario - alerta antecipado",
+        "source": "Principio de precaucao (IPMA)"
+      }
+    },
+    {
+      "id": "R03_PM10_ALTO",
+      "description": "Particulas inalaveis PM10 excedem limite 24h",
+      "priority": 9,
+      "condition": {
+        "type": "simple_threshold",
+        "variable": "PM10",
+        "operator": ">=",
+        "threshold": 50,
+        "unit": "ug/m3",
+        "note": "Limite e 24h, aplicado conservadoramente a dados horarios"
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "air_quality",
+        "action": "Evitar exercicio ao ar livre. Fechar janelas em ambientes internos.",
+        "rationale": "Particulas inalaveis afetam vias respiratorias",
+        "source": "Diretiva 2008/50/CE (50 ug/m3, 24h)"
+      }
+    },
+    {
+      "id": "R04_PM25_ALTO",
+      "description": "Particulas finas PM2.5 excedem limite anual UE",
+      "priority": 10,
+      "condition": {
+        "type": "simple_threshold",
+        "variable": "PM2_5",
+        "operator": ">=",
+        "threshold": 25,
+        "unit": "ug/m3",
+        "note": "Limite anual aplicado a dados horarios por precaucao"
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "air_quality",
+        "action": "Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.",
+        "rationale": "Particulas ultrafinas atravessam alveolos pulmonares",
+        "source": "Diretiva 2008/50/CE (25 ug/m3, anual); WHO 2021 (15 ug/m3, 24h)"
+      }
+    },
+    {
+      "id": "R05_O3_ALTO",
+      "description": "Ozono troposferico - limiar de informacao",
+      "priority": 8,
+      "condition": {
+        "type": "simple_threshold",
+        "variable": "O3",
+        "operator": ">=",
+        "threshold": 180,
+        "unit": "ug/m3"
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "air_quality",
+        "action": "Limiar de informacao excedido. Evitar atividade fisica intensa ao ar livre 14-20h.",
+        "rationale": "O3 causa irritacao respiratoria; pico fotoquimico diurno",
+        "source": "Diretiva 2008/50/CE, art. 18 (180 ug/m3, limiar informacao)"
+      }
+    },
+    {
+      "id": "R06_CO_ALTO",
+      "description": "Monoxido de carbono - media 8h critica",
+      "priority": 9,
+      "condition": {
+        "type": "simple_threshold",
+        "variable": "CO_8h_avg",
+        "operator": ">=",
+        "threshold": 10,
+        "unit": "mg/m3",
+        "preprocessing": "Calcular media movel 8h antes de avaliar"
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "air_quality",
+        "action": "Nivel critico de CO. Evitar tuneis e vias de trafego intenso. Ventilar ambientes.",
+        "rationale": "CO liga-se hemoglobina, reduz transporte de O2",
+        "source": "Diretiva 2008/50/CE (10 mg/m3, maxima media diaria 8h)"
+      }
+    },
+    {
+      "id": "R07_SO2_ALTO",
+      "description": "Dioxido de enxofre - limite horario",
+      "priority": 7,
+      "condition": {
+        "type": "simple_threshold",
+        "variable": "SO2",
+        "operator": ">=",
+        "threshold": 350,
+        "unit": "ug/m3"
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "air_quality",
+        "action": "Nivel critico SO2. Asmaticos evitem exposicao. Investigar fonte de emissao.",
+        "rationale": "SO2 causa broncoconstricao aguda (minutos)",
+        "source": "Diretiva 2008/50/CE (350 ug/m3, horario)"
+      }
+    },
+    {
+      "id": "R08_CALOR_EXTREMO",
+      "description": "Onda de calor extremo",
+      "priority": 10,
+      "condition": {
+        "type": "simple_threshold",
+        "variable": "temperature_c",
+        "operator": ">=",
+        "threshold": 40,
+        "unit": "C"
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "meteorological",
+        "action": "Alerta vermelho calor. Ativar Plano de Contingencia. Populacoes vulneraveis em risco.",
+        "rationale": "Risco de exaustao termica e golpe de calor",
+        "source": "IPMA (vermelho >40C); DGS Plano Contingencia Temperaturas Extremas"
+      }
+    },
+    {
+      "id": "R09_RISCO_INCENDIO",
+      "description": "Risco maximo de incendio florestal",
+      "priority": 10,
+      "condition": {
+        "type": "compound_and",
+        "conditions": [
+          {
+            "variable": "temperature_c",
+            "operator": ">=",
+            "value": 35
+          },
+          {
+            "variable": "humidity_percent",
+            "operator": "<=",
+            "value": 30
+          }
+        ]
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "meteorological",
+        "action": "Risco maximo incendio florestal. Proibir queimadas. Vigilancia reforcada.",
+        "rationale": "Calor + baixa humidade = vegetacao desidratada (combustivel)",
+        "source": "IPMA Indice FWI (simplificado); DECIR 03/2019"
+      }
+    },
+    {
+      "id": "R10_VENTO_FORTE",
+      "description": "Vento forte - alerta laranja",
+      "priority": 7,
+      "condition": {
+        "type": "simple_threshold",
+        "variable": "wind_speed_kmh",
+        "operator": ">=",
+        "threshold": 75,
+        "unit": "km/h",
+        "note": "Ideal seria usar rajadas, nao velocidade media"
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "meteorological",
+        "action": "Alerta laranja vento. Risco de queda de arvores e estruturas. Evitar deslocacoes.",
+        "rationale": "Ventos destrutivos (Beaufort forca 9)",
+        "source": "IPMA (laranja 75-90 km/h); Escala Beaufort"
+      }
+    },
+    {
+      "id": "R11_PRECIPITACAO_INTENSA",
+      "description": "Precipitacao horaria intensa",
+      "priority": 6,
+      "condition": {
+        "type": "simple_threshold",
+        "variable": "precipitation_mm",
+        "operator": ">=",
+        "threshold": 10,
+        "unit": "mm/h"
+      },
+      "consequence": {
+        "risk_level": "MODERADO",
+        "risk_code": 2,
+        "category": "meteorological",
+        "action": "Precipitacao intensa. Risco de inundacoes em zonas baixas. Evitar viajar.",
+        "rationale": "Sobrecarga sistemas drenagem; flash floods",
+        "source": "IPMA (amarelo 10-30 mm/h); OMM (>7.6 mm/h = heavy rain)"
+      }
+    },
+    {
+      "id": "R12_QUALIDADE_AR_PESSIMA",
+      "description": "Episodio de poluicao multi-poluente com estagnacao",
+      "priority": 9,
+      "condition": {
+        "type": "compound_and",
+        "conditions": [
+          {
+            "type": "compound_or",
+            "conditions": [
+              {
+                "variable": "NO2",
+                "operator": ">=",
+                "value": 150
+              },
+              {
+                "variable": "PM10",
+                "operator": ">=",
+                "value": 40
+              },
+              {
+                "variable": "PM2_5",
+                "operator": ">=",
+                "value": 20
+              }
+            ]
+          },
+          {
+            "variable": "humidity_percent",
+            "operator": ">=",
+            "value": 80
+          }
+        ]
+      },
+      "consequence": {
+        "risk_level": "ALTO",
+        "risk_code": 3,
+        "category": "compound",
+        "action": "Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saidas.",
+        "rationale": "Multiplos poluentes + estagnacao atmosferica (inversao termica)",
+        "source": "Diretiva 2008/50/CE art. 24 (episodios poluicao); conceito EEA AQI"
+      }
+    }
+  ],
+  "risk_levels": {
+    "NORMAL": {
+      "code": 0,
+      "color": "green",
+      "description": "Sem risco identificado"
+    },
+    "BAIXO": {
+      "code": 1,
+      "color": "yellow",
+      "description": "Risco limitado - vigilancia"
+    },
+    "MODERADO": {
+      "code": 2,
+      "color": "orange",
+      "description": "Risco significativo - acao recomendada"
+    },
+    "ALTO": {
+      "code": 3,
+      "color": "red",
+      "description": "Risco grave - acao obrigatoria"
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "date": "2026-04-08",
+    "author": "Equipa Projeto IA Cidades Sustentaveis",
+    "total_rules": 12,
+    "rule_categories": {
+      "air_quality": 7,
+      "meteorological": 4,
+      "compound": 1
+    },
+    "notes": "Regras baseadas em Diretiva 2008/50/CE (UE), IPMA, WHO Guidelines 2021, DGS Portugal",
+    "priority_explanation": "10=critico, 7-9=alto, 5-6=moderado. Regras com prioridade >8 acionam alertas imediatos."
+  }
+}
