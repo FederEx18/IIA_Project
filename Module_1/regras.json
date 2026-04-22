@@ -15,8 +15,8 @@
         "risk_level": "ALTO",
         "risk_code": 3,
         "category": "air_quality",
-        "action": "Limitar trafego automovel. Grupos sensiveis evitem exposicao prolongada.",
-        "rationale": "Violacao limite horario Diretiva 2008/50/CE",
+        "action": "Limitar trafego automovel. Grupos sensiveis evitem exposição prolongada.",
+        "rationale": "Violação limite horario Diretiva 2008/50/CE",
         "source": "Diretiva 2008/50/CE, Anexo XI"
       }
     },
@@ -35,7 +35,7 @@
         "risk_level": "MODERADO",
         "risk_code": 2,
         "category": "air_quality",
-        "action": "Monitorizar evolucao. Sensiveis reduzam atividade ao ar livre.",
+        "action": "Monitorizar evolucão. Sensiveis reduzam atividade ao ar livre.",
         "rationale": "50% do limite horario - alerta antecipado",
         "source": "Principio de precaucao (IPMA)"
       }
@@ -50,7 +50,7 @@
         "operator": ">=",
         "threshold": 50,
         "unit": "ug/m3",
-        "note": "Limite e 24h, aplicado conservadoramente a dados horarios"
+        "note": "Limite e 24h, aplicado conservadoramente a dados horários"
       },
       "consequence": {
         "risk_level": "ALTO",
@@ -71,7 +71,7 @@
         "operator": ">=",
         "threshold": 25,
         "unit": "ug/m3",
-        "note": "Limite anual aplicado a dados horarios por precaucao"
+        "note": "Limite anual aplicado a dados horários por precaução"
       },
       "consequence": {
         "risk_level": "ALTO",
@@ -138,7 +138,7 @@
         "risk_level": "ALTO",
         "risk_code": 3,
         "category": "air_quality",
-        "action": "Nivel critico SO2. Asmaticos evitem exposicao. Investigar fonte de emissao.",
+        "action": "Nivel critico SO2. Asmaticos evitem exposição. Investigar fonte de emissão.",
         "rationale": "SO2 causa broncoconstricao aguda (minutos)",
         "source": "Diretiva 2008/50/CE (350 ug/m3, horario)"
       }
@@ -158,8 +158,8 @@
         "risk_level": "ALTO",
         "risk_code": 3,
         "category": "meteorological",
-        "action": "Alerta vermelho calor. Ativar Plano de Contingencia. Populacoes vulneraveis em risco.",
-        "rationale": "Risco de exaustao termica e golpe de calor",
+        "action": "Alerta vermelho calor. Ativar Plano de Contingencia. Populações vulneráveis em risco.",
+        "rationale": "Risco de exaustão termica e golpe de calor",
         "source": "IPMA (vermelho >40C); DGS Plano Contingencia Temperaturas Extremas"
       }
     },
@@ -186,7 +186,7 @@
         "risk_level": "ALTO",
         "risk_code": 3,
         "category": "meteorological",
-        "action": "Risco maximo incendio florestal. Proibir queimadas. Vigilancia reforcada.",
+        "action": "Risco máximo incendio florestal. Proibir queimadas. Vigilancia reforcada.",
         "rationale": "Calor + baixa humidade = vegetacao desidratada (combustivel)",
         "source": "IPMA Indice FWI (simplificado); DECIR 03/2019"
       }
@@ -207,7 +207,7 @@
         "risk_level": "ALTO",
         "risk_code": 3,
         "category": "meteorological",
-        "action": "Alerta laranja vento. Risco de queda de arvores e estruturas. Evitar deslocacoes.",
+        "action": "Alerta laranja vento. Risco de queda de arvores e estruturas. Evitar deslocações.",
         "rationale": "Ventos destrutivos (Beaufort forca 9)",
         "source": "IPMA (laranja 75-90 km/h); Escala Beaufort"
       }
@@ -227,7 +227,7 @@
         "risk_level": "MODERADO",
         "risk_code": 2,
         "category": "meteorological",
-        "action": "Precipitacao intensa. Risco de inundacoes em zonas baixas. Evitar viajar.",
+        "action": "Precipitação intensa. Risco de inundações em zonas baixas. Evitar viajar.",
         "rationale": "Sobrecarga sistemas drenagem; flash floods",
         "source": "IPMA (amarelo 10-30 mm/h); OMM (>7.6 mm/h = heavy rain)"
       }
@@ -270,8 +270,8 @@
         "risk_level": "ALTO",
         "risk_code": 3,
         "category": "compound",
-        "action": "Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saidas.",
-        "rationale": "Multiplos poluentes + estagnacao atmosferica (inversao termica)",
+        "action": "Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.",
+        "rationale": "Multiplos poluentes + estagnação atmosferica (inversão termica)",
         "source": "Diretiva 2008/50/CE art. 24 (episodios poluicao); conceito EEA AQI"
       }
     }
