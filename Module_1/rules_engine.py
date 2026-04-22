@@ -70,3 +70,5 @@ def evaluate_condition(condition, row):
         return evaluate_compound_or(condition, row)
     else:
         raise ValueError(f"Tipo de condição desconhecido: {cond_type}")
+
+# Avalia todas as regras para um dado registro

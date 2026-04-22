@@ -67,7 +67,7 @@
       "priority": 10,
       "condition": {
         "type": "simple_threshold",
-        "variable": "PM2_5",
+        "variable": "PM2.5",
         "operator": ">=",
         "threshold": 25,
         "unit": "ug/m3",
