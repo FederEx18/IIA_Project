@@ -12,9 +12,12 @@ def load_rules_from_json(file_path):
 def evaluate_simple(condition, row):
     var = condition["variable"]
     operator = condition["operator"]
-    value = float(condition["value"])
+    
+    # Aceitar "threshold" (condições raiz) ou "value" (sub-condições)
+    # Só existe value na R09 e R12
+    value = float(condition.get("threshold", condition.get("value")))
 
-    if var not in row or row[var] == "":
+    if var not in row or row[var] == "" or pd.isna(row[var]):
         return False  # Variável ausente ou vazia, regra não é satisfeita
     
     observed = float(row[var])
@@ -39,7 +42,7 @@ def evaluate_range(condition, row):
     
     if min_val is not None and observed < float(min_val):  
         return False
-    if max_val is not None and observed > float(max_val):
+    if max_val is not None and observed >= float(max_val):
         return False
     return True
 
