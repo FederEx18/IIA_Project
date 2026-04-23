@@ -20,7 +20,7 @@ def get_priority(rule):
 # Leitura das regras
 # -------------------------------------------------------
 def load_rules(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='UTF-8') as file:
         rules = json.load(file)
     regras = rules.get("rules", [])
     regras.sort(key=get_priority, reverse=True)# ordena da mais urgente (10) para a menos urgente (1)
