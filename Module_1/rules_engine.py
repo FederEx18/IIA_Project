@@ -4,8 +4,8 @@ import json
 #-------------------------------------------------------
 # PATHS 
 #-------------------------------------------------------
-INPUT_CSV  = "processed_lisboa_porto_air_quality.csv"
-RULES_JSON = "regras.json"
+INPUT_CSV  = "data/processed_lisboa_porto_air_quality.csv"
+RULES_JSON = "Module_1/regras.json"
 OUTPUT_CSV = "resultados_alertas.csv"  # ficheiro de output para a rede bayesiana
 
 
