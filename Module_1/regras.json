@@ -253,7 +253,7 @@
                 "value": 40
               },
               {
-                "variable": "PM2.5",
+                "variable": "PM2_5",
                 "operator": ">=",
                 "value": 20
               }
