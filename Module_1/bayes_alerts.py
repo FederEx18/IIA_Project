@@ -202,16 +202,16 @@ def mostrar_inferencias(bn):
     Testa a rede com cenários concretos.
     """
     cenarios = [
-        ("Sem evidência (prior)",              {}),
-        ("Verão",                              {"estacao": "verao"}),
-        ("Inverno",                            {"estacao": "inverno"}),
-        ("NO2 baixo",                          {"no2": "baixo"}),
-        ("NO2 moderado",                       {"no2": "moderado"}),
-        ("NO2 alto",                           {"no2": "alto"}),
-        ("Verão + NO2 baixo",                  {"estacao": "verao",    "no2": "baixo"}),
-        ("Inverno + NO2 alto",                 {"estacao": "inverno",  "no2": "alto"}),
-        ("Temperatura quente + NO2 alto",      {"temperatura": "quente", "no2": "alto"}),
-        ("Temperatura fria + NO2 moderado",    {"temperatura": "fria",   "no2": "moderado"}),
+        ("Sem evidência (prior)", {}),
+        ("Verão",{"estacao": "verao"}),
+        ("Inverno",{"estacao": "inverno"}),
+        ("NO2 baixo",{"no2": "baixo"}),
+        ("NO2 moderado",{"no2": "moderado"}),
+        ("NO2 alto",{"no2": "alto"}),
+        ("Verão + NO2 baixo",{"estacao": "verao",    "no2": "baixo"}),
+        ("Inverno + NO2 alto",{"estacao": "inverno",  "no2": "alto"}),
+        ("Temperatura quente + NO2 alto",{"temperatura": "quente", "no2": "alto"}),
+        ("Temperatura fria + NO2 moderado",{"temperatura": "fria",   "no2": "moderado"}),
     ]
 
     print()
@@ -222,9 +222,9 @@ def mostrar_inferencias(bn):
     print("-" * 65)
 
     for nome, ev in cenarios:
-        probs    = bn.query(ev)
-        p_boa    = probs.get("boa", 0)
-        p_ma     = probs.get("ma", 0)
+        probs= bn.query(ev)
+        p_boa = probs.get("boa", 0)
+        p_ma =probs.get("ma", 0)
         previsao = "boa" if p_boa > p_ma else "má"
         print(f"{nome:<38} {p_boa:>8.3f} {p_ma:>8.3f} {previsao:>10}")
 
@@ -239,7 +239,7 @@ def avaliar_dataset(bn, df_disc):
     """
     Corre a rede para cada linha do dataset e avalia.
     """
-    resultados = []
+    resultados=[]
     for _, row in df_disc.iterrows():
         ev = {
             "estacao"    : str(row["estacao"]),
@@ -274,7 +274,6 @@ def mostrar_graficos(df_res):
     Gráficos de avaliação — seguindo o estilo do notebook da professora.
     """
     fig, axes = plt.subplots(1, 2, figsize=(14, 5))
-
     # Matriz de confusão
     labels = ["boa", "ma"]
 
@@ -295,6 +294,7 @@ def mostrar_graficos(df_res):
     plt.tight_layout()
     plt.savefig("bayes_resultados.png", dpi=150, bbox_inches="tight")
     plt.show()
+
     print("Gráfico guardado em 'bayes_resultados.png'")
 
 
@@ -303,20 +303,15 @@ def mostrar_graficos(df_res):
 def executar_rede_bayesiana():
     # 1. Carregar dados
     df = carregar_dados()
-
     # 2. Discretizar variáveis
     df_disc = discretizar(df)
-
     # 3. Criar e treinar a rede
     bn = BayesianNetwork()
     bn.fit(df_disc)
-
     # 4. Exemplos de inferência (perguntar à rede))
     mostrar_inferencias(bn)
-
     # 5. Avaliar no dataset 
     df_res = avaliar_dataset(bn, df_disc)
-
     # 6. Grsfs
     mostrar_graficos(df_res)
 
@@ -324,4 +319,3 @@ if __name__ == "__main__":
 
     executar_rede_bayesiana()
 
-    
