@@ -16,7 +16,7 @@ from sklearn.metrics import classification_report, confusion_matrix, ConfusionMa
 # ----------------------------------------------------------
 # PATHS
 # ----------------------------------------------
-INPUT_CSV = "processed_lisboa_porto_air_quality.csv"
+INPUT_CSV = "data/processed_lisboa_porto_air_quality.csv"
 
 
 # ----------------------------------------------------------
@@ -318,4 +318,3 @@ def executar_rede_bayesiana():
 if __name__ == "__main__":
 
     executar_rede_bayesiana()
-
