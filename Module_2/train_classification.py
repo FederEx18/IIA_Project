@@ -33,11 +33,11 @@ from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_s
 # PATHS
 # ----------------------------------------------------------
 DATA_CSV    = r'data/classification_data_clean.csv'
-METRICS_CSV = r'Module_2/metrics.csv'
-ROC_PNG     = r'Module_2/roc_curves_classification.png'
-LR_PKL      = r'Module_2/logisticregression_classification.pkl'
-RF_PKL      = r'Module_2/randomforest_classification.pkl'
-KNN_PKL     = r'Module_2/knn_classification.pkl'
+METRICS_CSV = r'Module_2/resultados/metrics.csv'
+ROC_PNG     = r'Module_2/resultados/roc_curves_classification.png'
+LR_PKL      = r'Module_2/resultados/logisticregression_classification.pkl'
+RF_PKL      = r'Module_2/resultados/randomforest_classification.pkl'
+KNN_PKL     = r'Module_2/resultados/knn_classification.pkl'
 
 TARGET = 'air_quality_good'
 
@@ -212,7 +212,7 @@ for nome, modelo, grid in modelos:
     print(f"Real ma    {cm[0,0]:>7d}   {cm[0,1]:>7d}")
     print(f"Real boa   {cm[1,0]:>7d}   {cm[1,1]:>7d}")
 
-    pkl_path = f'Module_2/{nome.lower()}_classification.pkl'
+    pkl_path = f'Module_2/resultados/{nome.lower()}_classification.pkl'
     joblib.dump(final, pkl_path)
     print(f"\nModelo guardado em: {pkl_path}")
 

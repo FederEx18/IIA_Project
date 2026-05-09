@@ -3,3 +3,5 @@ __pycache__/
 .claude/
 codigo_prof/
 *_output.*
+Module_2/resultados/
+*.conflict_backup

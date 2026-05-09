@@ -30,10 +30,10 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 # PATHS
 # ----------------------------------------------------------
 DATA_CSV    = 'data/regression_data_clean.csv'
-METRICS_CSV = 'Module_2/metrics.csv'
-RES_PNG     = 'Module_2/residuals_regression.png'
-LR_PKL      = 'Module_2/linearregression_regression.pkl'
-RF_PKL      = 'Module_2/randomforest_regression.pkl'
+METRICS_CSV = 'Module_2/resultados/metrics.csv'
+RES_PNG     = 'Module_2/resultados/residuals_regression.png'
+LR_PKL      = 'Module_2/resultados/linearregression_regression.pkl'
+RF_PKL      = 'Module_2/resultados/randomforest_regression.pkl'
 
 TARGET = 'NO2'
 
