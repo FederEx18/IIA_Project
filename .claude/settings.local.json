@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($nb = Get-Content \"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\\\\Module_1\\\\dev.ipynb\" -Raw | ConvertFrom-Json; $i = 0; foreach \\($cell in $nb.cells\\) { $src = \\($cell.source -join \"\"\\) -replace \"`n\",\" \" -replace \"`r\",\"\" ; if \\($src.Length -gt 70\\) { $src = $src.Substring\\(0,70\\) + \"...\" }; \"$i [$\\($cell.cell_type\\)] id=$\\($cell.id\\) :: $src\"; $i++ })",
+      "PowerShell(Get-Command python)",
+      "PowerShell(Get-Command python3 -ErrorAction SilentlyContinue)",
+      "PowerShell(& \"C:\\\\Python314\\\\python.exe\" -c \"import pandas; print\\(pandas.__version__\\)\")"
+    ]
+  }
+}

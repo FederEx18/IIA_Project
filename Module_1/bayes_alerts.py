@@ -16,7 +16,7 @@ from sklearn.metrics import classification_report, confusion_matrix, ConfusionMa
 # ----------------------------------------------------------
 # PATHS
 # ----------------------------------------------
-INPUT_CSV = "data/processed_lisboa_porto_air_quality.csv"
+INPUT_CSV = "data/clean_air_quality.csv"
 
 
 # ----------------------------------------------------------
