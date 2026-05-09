@@ -18,7 +18,10 @@
       "Bash(awk 'NR>=60 && NR<=75' \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")",
       "Bash(awk 'NR>=74 && NR<=112' \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")",
       "Bash(awk 'NR>=115 && NR<=325' \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")",
-      "Bash(awk 'NR>=305 && NR<=325' \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")"
+      "Bash(awk 'NR>=305 && NR<=325' \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")",
+      "Bash(python -c ' *)",
+      "Bash(xxd \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")",
+      "Bash(xxd)"
     ]
   }
 }
