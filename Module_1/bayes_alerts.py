@@ -3,41 +3,35 @@ bayes_alerts.py
 Módulo 1 — Rede Bayesiana
 Projeto: IA para Cidades Sustentáveis
 
-Rede Bayesiana (conforme código da professora Aula 5)
-para estimar a probabilidade de má qualidade do ar em Lisboa e Porto.
+Rede Bayesiana (baseada no código da prof, Aula 5) para estimar a
+probabilidade de má qualidade do ar em Lisboa e Porto.
 
-------------------------------------------------------------------------------
-DECISÃO DE DESIGN — porque é que esta rede usa estas features e não outras
-------------------------------------------------------------------------------
+A rede tem 4 nós:
+    estacao -> temperatura
+    estacao -> pm25
+    (temperatura, pm25) -> qualidade_ar
 
-Esta rede tem 4 nós:  estacao -> temperatura
-                      estacao -> pm25
-                      (temperatura, pm25) -> qualidade_ar
+A target qualidade_ar é definida no notebook (célula de limpeza) a partir
+de duas variáveis que NÃO estão na rede:
+    qualidade_ar = "ma"  quando  (NO2 >= 30 µg/m³)  AND  (humidade >= 80%)
 
-A target `qualidade_ar` é definida no notebook `dev.ipynb` (célula de limpeza)
-a partir de DUAS variáveis QUE NÃO ESTÃO NA REDE:
-       qualidade_ar = "má"  ⇔  (NO2 ≥ 30 µg/m³) AND (humidade ≥ 80 %)
+Porque separar a target dos inputs da rede?
+As regras (regras.json) já usam limites legais da UE para gerar alertas
+(NO2>=200, PM10>=50, PM2.5>=25, ...). Se a target da rede usasse os
+mesmos limites e a rede tivesse PM2.5 como input, a rede só copiava a
+regra — 99% accuracy mas zero aprendizagem real.
 
-Porquê separar a definição da target dos nós da rede?
-    As regras do módulo simbólico (regras.json) já usam thresholds da
-    Diretiva 2008/50/CE (NO2≥200, PM10≥50, PM2.5≥25, ...) para gerar
-    alertas determinísticos. Se a target da rede fosse definida pelos
-    MESMOS thresholds e a rede usasse PM2.5 como input, a rede limitar-se-ia
-    a "ler" a regra — accuracy ~99% sem aprender nada. A rede deixaria de
-    modelar incerteza, que é o seu propósito.
+Por isso:
+- Target -> variáveis fora da rede (NO2 + humidade)
+- Inputs da rede -> temperatura + PM2.5 + estação
+- A rede aprende padrões reais:
+    PM2.5 alto coincide com NO2 alto (ambos do tráfego)
+    Outono ameno coincide com humidade alta
+- As métricas ficam mais baixas (mas honestas) — a rede adivinha,
+  não copia.
 
-Solução adoptada:
-    - Target ← variáveis fora da rede (NO2 + humidade)
-    - Inputs da rede → temperatura + PM2.5 + estação
-    - A rede aprende correlações INDIRECTAS:
-        * PM2.5 alto coincide frequentemente com NO2 alto (ambos vêm de tráfego)
-        * Temperatura amena de outono coincide frequentemente com humidade alta
-    - As métricas resultantes são mais baixas (e mais honestas) que sob a
-      definição circular: a rede tem de inferir, não copiar.
-
-Esta separação está documentada no notebook dev.ipynb (markdown "Diagnóstico
-e plano de limpeza" + Secção 8 "Conclusão Crítica").
-------------------------------------------------------------------------------
+Tudo explicado no notebook (markdown "Diagnóstico e plano de limpeza"
+e Secção 8 "Conclusão Crítica").
 """
 
 import pandas as pd
