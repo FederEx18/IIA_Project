@@ -19,9 +19,8 @@
       "Bash(awk 'NR>=74 && NR<=112' \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")",
       "Bash(awk 'NR>=115 && NR<=325' \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")",
       "Bash(awk 'NR>=305 && NR<=325' \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")",
-      "Bash(python -c ' *)",
-      "Bash(xxd \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\")",
-      "Bash(xxd)"
+      "Bash(python -m jupyter nbconvert --to notebook --execute eda.ipynb --output eda.ipynb)",
+      "Bash(\"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/.venv/Scripts/python.exe\" -m jupyter nbconvert --to notebook --execute \"c:/Users/tomas/OneDrive/Documentos/Projetos/IIA_Project/Module_2/eda.ipynb\" --output eda.ipynb)"
     ]
   }
 }
