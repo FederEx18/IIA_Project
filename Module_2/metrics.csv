@@ -1,6 +1,0 @@
-modelo,tarefa,accuracy,precision,recall,f1,roc_auc,r2,mse,mae
-LogisticRegression,classificacao,0.8304,0.3438,0.7586,0.4731,0.8533,,,
-RandomForest,classificacao,0.917,0.5641,0.7586,0.6471,0.9366,,,
-KNN,classificacao,0.9239,0.6842,0.4483,0.5417,0.9127,,,
-LinearRegression,regressao,,,,,,0.7182,44.8023,5.1014
-RandomForest,regressao,,,,,,0.7231,44.0225,5.0737
