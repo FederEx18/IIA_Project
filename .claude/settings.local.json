@@ -10,7 +10,8 @@
       "PowerShell(Remove-Item \"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\\\\resultados_alertas.csv\" -Force; Get-ChildItem -Path \"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\" -Filter \"resultados_alertas.csv\" -Recurse -Force | Format-Table FullName, LastWriteTime, @{n=\"KB\";e={[int]\\($_.Length/1024\\)}} -AutoSize)",
       "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\" -Filter \"bayes_resultados.png\" -Recurse -Force | Format-Table FullName, LastWriteTime, @{n=\"KB\";e={[int]\\($_.Length/1024\\)}} -AutoSize)",
       "PowerShell(Get-ChildItem \"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\\\\Module_1\\\\bayes_alerts.py\",\"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\\\\Module_1\\\\regras.json\",\"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\\\\data\\\\clean_air_quality.csv\" | Format-Table FullName, LastWriteTime, @{n=\"KB\";e={[int]\\($_.Length/1024\\)}} -AutoSize)",
-      "PowerShell($nb = Get-Content \"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\\\\Module_1\\\\dev.ipynb\" -Raw | ConvertFrom-Json; $cell = $nb.cells | Where-Object { $_.id -eq \"74fdc543\" }; \\($cell.source -join \"\"\\))"
+      "PowerShell($nb = Get-Content \"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\\\\Module_1\\\\dev.ipynb\" -Raw | ConvertFrom-Json; $cell = $nb.cells | Where-Object { $_.id -eq \"74fdc543\" }; \\($cell.source -join \"\"\\))",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\tomas\\\\OneDrive\\\\Documentos\\\\Projetos\\\\IIA_Project\\\\Module_2\" | Format-Table Name, @{n=\"KB\";e={[int]\\($_.Length/1024\\)}}, LastWriteTime -AutoSize)"
     ]
   }
 }

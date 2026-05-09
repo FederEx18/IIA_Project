@@ -1,0 +1,1443 @@
+cidade;datetime;n_alertas;risco;regras;acao
+Lisboa;05/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 07:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;05/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 10:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;05/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 13:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;05/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 15:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;05/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;05/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;05/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;05/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;06/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;07/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 09:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;07/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;07/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 08:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;08/09/25 09:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;08/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;08/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;08/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 08:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;09/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 12:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;09/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;09/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;09/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 07:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;10/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;10/09/25 09:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;10/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 12:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;10/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 14:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;10/09/25 15:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;10/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;10/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;10/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;10/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;10/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;11/09/25 08:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;11/09/25 09:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;11/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;11/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;11/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;11/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;11/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 07:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;12/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;12/09/25 09:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;12/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;12/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;12/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;12/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 07:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;13/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;13/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;14/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;14/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;15/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;15/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 16:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;15/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;15/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;15/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;16/09/25 08:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;16/09/25 09:00;3;ALTO;R04_PM25_ALTO, R03_PM10_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;16/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 11:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;16/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 16:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;16/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;16/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;16/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;16/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;16/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 07:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;17/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 09:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;17/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 18:00;2;ALTO;R04_PM25_ALTO, R03_PM10_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;17/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;17/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;17/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 07:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;18/09/25 08:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;18/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;18/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;18/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;18/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;18/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 07:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;19/09/25 08:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;19/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;19/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;19/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;19/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;19/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 07:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;20/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;20/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;20/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;21/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;21/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 09:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;22/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 14:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;22/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;22/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;22/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;22/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;22/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 07:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;23/09/25 08:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;23/09/25 09:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;23/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 17:00;2;ALTO;R04_PM25_ALTO, R03_PM10_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;23/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;23/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;23/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;23/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 08:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;24/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 10:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;24/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;24/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 21:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;24/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;24/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 07:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;25/09/25 08:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;25/09/25 09:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;25/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 14:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;25/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 17:00;2;ALTO;R04_PM25_ALTO, R03_PM10_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;25/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;25/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;25/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;25/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;26/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;26/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 21:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;26/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;26/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;27/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 17:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;27/09/25 18:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;27/09/25 19:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;27/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;27/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;28/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;28/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;28/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;28/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;29/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;29/09/25 09:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;29/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;29/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;29/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;29/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;29/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 07:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;30/09/25 08:00;3;ALTO;R04_PM25_ALTO, R03_PM10_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;30/09/25 09:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;30/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;30/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;30/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;30/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;30/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 09:00;1;ALTO;R03_PM10_ALTO;Evitar exercicio ao ar livre. Fechar janelas em ambientes internos.
+Lisboa;01/10/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;01/10/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;01/10/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;01/10/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 07:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;02/10/25 08:00;1;ALTO;R03_PM10_ALTO;Evitar exercicio ao ar livre. Fechar janelas em ambientes internos.
+Lisboa;02/10/25 09:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;02/10/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;02/10/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;02/10/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;02/10/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;03/10/25 08:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;03/10/25 09:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;03/10/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 16:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;03/10/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;03/10/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Lisboa;03/10/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;03/10/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 01:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 02:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 03:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 04:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 05:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 06:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 07:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 08:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Lisboa;04/10/25 10:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 11:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 12:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 13:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 14:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 15:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 16:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 17:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 18:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 19:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 20:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 21:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 22:00;0;NORMAL;;Sem ação necessária.
+Lisboa;04/10/25 23:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Lisboa;05/10/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;05/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;05/09/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;05/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;05/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;06/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;07/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;07/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;08/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;08/09/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;08/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;08/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;08/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;08/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 07:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;09/09/25 08:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;09/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;09/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 19:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;09/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;09/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;10/09/25 10:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;10/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 12:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;10/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 17:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;10/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 19:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;10/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;10/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;11/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 17:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;11/09/25 18:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;11/09/25 19:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;11/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;11/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;12/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;12/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;12/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;12/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;13/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;14/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;15/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;15/09/25 09:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;15/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;15/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;15/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;16/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;16/09/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;16/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;16/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 07:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;17/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;17/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;17/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;18/09/25 08:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;18/09/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;18/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;18/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;18/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;19/09/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;19/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;19/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;19/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;19/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;19/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;20/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;21/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;22/09/25 09:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;22/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;22/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;22/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;23/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;23/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 15:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;24/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;24/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;24/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 07:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;25/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 09:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;25/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;25/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;25/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 08:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;26/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;26/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;26/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;27/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 02:00;1;MODERADO;R11_PRECIPITACAO_INTENSA;Precipitação intensa. Risco de inundações em zonas baixas. Evitar viajar.
+Porto;28/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 04:00;1;MODERADO;R11_PRECIPITACAO_INTENSA;Precipitação intensa. Risco de inundações em zonas baixas. Evitar viajar.
+Porto;28/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;28/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;28/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;29/09/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 09:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;29/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 17:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;29/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;29/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;29/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;29/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 08:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;30/09/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 18:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;30/09/25 19:00;1;ALTO;R04_PM25_ALTO;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;30/09/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;30/09/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 07:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;01/10/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;01/10/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;01/10/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;02/10/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 18:00;2;ALTO;R04_PM25_ALTO, R12_QUALIDADE_AR_PESSIMA;Grupos sensiveis permanecam em ambientes internos. Usar mascara FFP2 se necessario.
+Porto;02/10/25 19:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;02/10/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;02/10/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 07:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;03/10/25 08:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;03/10/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 18:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;03/10/25 19:00;1;ALTO;R12_QUALIDADE_AR_PESSIMA;Qualidade do ar muito degradada agravada por humidade alta. Grupos de risco evitem saídas.
+Porto;03/10/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;03/10/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 01:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 02:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 03:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 04:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 05:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 06:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 07:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 08:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 09:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 10:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 11:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 12:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 13:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 14:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 15:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 16:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 17:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 18:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 19:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 20:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 21:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 22:00;0;NORMAL;;Sem ação necessária.
+Porto;04/10/25 23:00;0;NORMAL;;Sem ação necessária.
+Porto;05/10/25 00:00;0;NORMAL;;Sem ação necessária.
+Porto;05/10/25 01:00;0;NORMAL;;Sem ação necessária.

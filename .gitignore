@@ -1,3 +1,5 @@
 __pycache__/
+.venv/
+.claude/
+codigo_prof/
 *_output.*
-resultados_alertas.csv
