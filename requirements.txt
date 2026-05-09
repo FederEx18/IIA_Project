@@ -1,0 +1,14 @@
+# Core data science
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.12
+
+# Machine learning (Modulo 2)
+scikit-learn>=1.4
+joblib>=1.3
+
+# Notebooks (eda.ipynb, dev.ipynb)
+jupyter>=1.0
+ipykernel>=6.25
+
