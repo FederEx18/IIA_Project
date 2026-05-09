@@ -1,12 +1,16 @@
 import pandas as pd
 import json
+from pathlib import Path
 
 #-------------------------------------------------------
-# PATHS 
+# PATHS
 #-------------------------------------------------------
+# OUTPUT fica sempre dentro de Module_1/ (resolvido a partir da localização
+# deste ficheiro), independentemente do CWD de quem corre o script.
+_HERE      = Path(__file__).resolve().parent
 INPUT_CSV  = "data/clean_air_quality.csv"
 RULES_JSON = "Module_1/regras.json"
-OUTPUT_CSV = "resultados_alertas.csv"  # ficheiro de output para a rede bayesiana
+OUTPUT_CSV = str(_HERE / "resultados_alertas.csv")
 
 
 # -------------------------------------------------------
@@ -137,10 +141,6 @@ def run_inference(csv_path=INPUT_CSV, rules_path=RULES_JSON):
 
     df = pd.read_csv(csv_path, delimiter=";")
     print(f"Dataset carregado: {len(df)} linhas")
-
-    # renomear PM2.5 → PM2_5 (o ponto causa problemas em Python)
-    if "PM2.5" in df.columns:
-        df.rename(columns={"PM2.5": "PM2_5"}, inplace=True)
 
     # calcular média de CO nas últimas 8 horas (necessário para a regra R06)
     df["CO_8h_avg"] = df["CO"].rolling(window=8, min_periods=1).mean()

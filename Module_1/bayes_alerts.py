@@ -3,20 +3,55 @@ bayes_alerts.py
 Módulo 1 — Rede Bayesiana
 Projeto: IA para Cidades Sustentáveis
 
-Rede Bayesiana (conforme codigo da professora Aula 5)
+Rede Bayesiana (conforme código da professora Aula 5)
 para estimar a probabilidade de má qualidade do ar em Lisboa e Porto.
 
+------------------------------------------------------------------------------
+DECISÃO DE DESIGN — porque é que esta rede usa estas features e não outras
+------------------------------------------------------------------------------
+
+Esta rede tem 4 nós:  estacao -> temperatura
+                      estacao -> pm25
+                      (temperatura, pm25) -> qualidade_ar
+
+A target `qualidade_ar` é definida no notebook `dev.ipynb` (célula de limpeza)
+a partir de DUAS variáveis QUE NÃO ESTÃO NA REDE:
+       qualidade_ar = "má"  ⇔  (NO2 ≥ 30 µg/m³) AND (humidade ≥ 80 %)
+
+Porquê separar a definição da target dos nós da rede?
+    As regras do módulo simbólico (regras.json) já usam thresholds da
+    Diretiva 2008/50/CE (NO2≥200, PM10≥50, PM2.5≥25, ...) para gerar
+    alertas determinísticos. Se a target da rede fosse definida pelos
+    MESMOS thresholds e a rede usasse PM2.5 como input, a rede limitar-se-ia
+    a "ler" a regra — accuracy ~99% sem aprender nada. A rede deixaria de
+    modelar incerteza, que é o seu propósito.
+
+Solução adoptada:
+    - Target ← variáveis fora da rede (NO2 + humidade)
+    - Inputs da rede → temperatura + PM2.5 + estação
+    - A rede aprende correlações INDIRECTAS:
+        * PM2.5 alto coincide frequentemente com NO2 alto (ambos vêm de tráfego)
+        * Temperatura amena de outono coincide frequentemente com humidade alta
+    - As métricas resultantes são mais baixas (e mais honestas) que sob a
+      definição circular: a rede tem de inferir, não copiar.
+
+Esta separação está documentada no notebook dev.ipynb (markdown "Diagnóstico
+e plano de limpeza" + Secção 8 "Conclusão Crítica").
+------------------------------------------------------------------------------
 """
 
 import pandas as pd
 import matplotlib.pyplot as plt
 from itertools import product
+from pathlib import Path
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 
 # ----------------------------------------------------------
 # PATHS
 # ----------------------------------------------
-INPUT_CSV = "data/clean_air_quality.csv"
+_HERE      = Path(__file__).resolve().parent
+INPUT_CSV  = "data/clean_air_quality.csv"
+OUTPUT_PNG = str(_HERE / "bayes_resultados.png")
 
 
 # ----------------------------------------------------------
@@ -56,10 +91,10 @@ def discretizar(df):
     # Estação do ano ( categorica discreta)
     d["estacao"] = df["estacao"]
 
-    # NO2: baixo < 100 | moderado 100-200 | alto >= 200  (micro g/m3, Diretiva UE)
-    d["no2"] = pd.cut(df["NO2"],
-                      bins=[0, 100, 200, 500],
-                      labels=["baixo", "moderado", "alto"])
+    # PM2.5: baixo <15 (cumpre OMS) | moderado 15-25 | alto >=25 (excede UE)  (ug/m3)
+    d["pm25"] = pd.cut(df["PM2_5"],
+                       bins=[-0.01, 15, 25, 1000],
+                       labels=["baixo", "moderado", "alto"])
 
     # Temperatura: fria < 15 | amena 15-30 | quente >= 30  (°C, IPMA)
     d["temperatura"] = pd.cut(df["temperature_c"],
@@ -72,7 +107,7 @@ def discretizar(df):
     d = d.dropna()
 
     print(f"\nApós discretização: {len(d)} registos")
-    for col in ["no2", "temperatura", "qualidade_ar", "estacao"]:
+    for col in ["pm25", "temperatura", "qualidade_ar", "estacao"]:
         print(f"  {col}: {dict(d[col].value_counts())}")
 
     return d
@@ -87,9 +122,9 @@ class BayesianNetwork:
     Rede Bayesiana
     (Baseado no código da prof aula 5)
     Estrutura do DAG:
-        estacao  ->temperatura
-        estacao  -> no2
-        temperatura + no2 -> qualidade_ar
+        estacao  -> temperatura
+        estacao  -> pm25
+        temperatura + pm25 -> qualidade_ar
 
     Cada no tem uma Tabela de Probabilidade Condicional estimada por contagem dos dados (Maximum Likelihood + Laplace).
     """
@@ -99,8 +134,8 @@ class BayesianNetwork:
         self.parents = {
             "estacao"     : [],                          # nó raiz — sem pais
             "temperatura" : ["estacao"],                 # depende da estação
-            "no2"         : ["estacao"],                 # depende da estação
-            "qualidade_ar": ["temperatura", "no2"],      # depende dos dois
+            "pm25"        : ["estacao"],                 # depende da estação
+            "qualidade_ar": ["temperatura", "pm25"],     # depende dos dois
         }
         self.cpds       = {}
         self.categories = {}
@@ -202,16 +237,16 @@ def mostrar_inferencias(bn):
     Testa a rede com cenários concretos.
     """
     cenarios = [
-        ("Sem evidência (prior)", {}),
-        ("Verão",{"estacao": "verao"}),
-        ("Inverno",{"estacao": "inverno"}),
-        ("NO2 baixo",{"no2": "baixo"}),
-        ("NO2 moderado",{"no2": "moderado"}),
-        ("NO2 alto",{"no2": "alto"}),
-        ("Verão + NO2 baixo",{"estacao": "verao",    "no2": "baixo"}),
-        ("Inverno + NO2 alto",{"estacao": "inverno",  "no2": "alto"}),
-        ("Temperatura quente + NO2 alto",{"temperatura": "quente", "no2": "alto"}),
-        ("Temperatura fria + NO2 moderado",{"temperatura": "fria",   "no2": "moderado"}),
+        ("Sem evidência (prior)",          {}),
+        ("Outono",                         {"estacao": "outono"}),
+        ("PM2.5 baixo",                    {"pm25": "baixo"}),
+        ("PM2.5 moderado",                 {"pm25": "moderado"}),
+        ("PM2.5 alto",                     {"pm25": "alto"}),
+        ("Outono + PM2.5 baixo",           {"estacao": "outono", "pm25": "baixo"}),
+        ("Outono + PM2.5 alto",            {"estacao": "outono", "pm25": "alto"}),
+        ("Temperatura amena + PM2.5 alto", {"temperatura": "amena", "pm25": "alto"}),
+        ("Temperatura fria + PM2.5 alto",  {"temperatura": "fria",  "pm25": "alto"}),
+        ("Temperatura amena + PM2.5 baixo",{"temperatura": "amena", "pm25": "baixo"}),
     ]
 
     print()
@@ -244,7 +279,7 @@ def avaliar_dataset(bn, df_disc):
         ev = {
             "estacao"    : str(row["estacao"]),
             "temperatura": str(row["temperatura"]),
-            "no2"        : str(row["no2"]),
+            "pm25"       : str(row["pm25"]),
         }
         probs  = bn.query(ev)
         melhor = max(probs, key=probs.get)
@@ -292,28 +327,30 @@ def mostrar_graficos(df_res):
     axes[1].legend()
 
     plt.tight_layout()
-    plt.savefig("bayes_resultados.png", dpi=150, bbox_inches="tight")
+    plt.savefig(OUTPUT_PNG, dpi=150, bbox_inches="tight")
     plt.show()
 
-    print("Gráfico guardado em 'bayes_resultados.png'")
+    print(f"Gráfico guardado em '{OUTPUT_PNG}'")
 
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-def executar_rede_bayesiana():
+def executar_rede_bayesiana(caminho=INPUT_CSV):
     # 1. Carregar dados
-    df = carregar_dados()
+    df = carregar_dados(caminho)
     # 2. Discretizar variáveis
     df_disc = discretizar(df)
     # 3. Criar e treinar a rede
     bn = BayesianNetwork()
     bn.fit(df_disc)
-    # 4. Exemplos de inferência (perguntar à rede))
+    # 4. Exemplos de inferência (perguntar à rede)
     mostrar_inferencias(bn)
-    # 5. Avaliar no dataset 
+    # 5. Avaliar no dataset
     df_res = avaliar_dataset(bn, df_disc)
-    # 6. Grsfs
+    # 6. Gráficos (matriz de confusão + confiança)
     mostrar_graficos(df_res)
+    # Devolve a rede e os dados discretizados para análise extra (CPDs, swing, etc.)
+    return bn, df_disc
 
 if __name__ == "__main__":
 
