@@ -3,7 +3,8 @@ __pycache__/
 .claude/
 codigo_prof/
 *_output.*
-Module_2/resultados/
+Module_2/resultados/*
+!Module_2/resultados/.gitkeep
 *.conflict_backup
 Relatorio_Final_IA.docx
 Enunciado_projeto_IA.docx
