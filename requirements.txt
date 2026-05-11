@@ -7,3 +7,4 @@ anthropic
 seaborn
 jupyterlab
 ipykernel
+anthropic
