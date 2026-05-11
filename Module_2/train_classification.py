@@ -2,10 +2,16 @@
 train_classification.py
 Modulo 2 - Treino dos modelos de classificacao para prever air_quality_good
 
-Modelos:
-  - Logistic Regression  (linear, com StandardScaler)
-  - Random Forest        (nao-linear, ensemble)
-  - KNN                  (baseado em distancia, com StandardScaler)
+Modelos (cada um na sua melhor configuracao, validada pela iteracao em
+train_classification_comparacao.py):
+  - Logistic Regression  (linear, com StandardScaler, class_weight='balanced')
+  - Random Forest        (nao-linear, ensemble, class_weight='balanced')
+  - KNN                  (baseado em distancia, com StandardScaler + SMOTE)
+
+Nota sobre o KNN: o KNeighborsClassifier nao suporta class_weight. Como o
+dataset esta desbalanceado (~90/10), aplica-se SMOTE dentro do Pipeline
+(imblearn) para gerar amostras sinteticas da classe minoritaria — apenas
+no fold de treino da CV, evitando data leakage para a validacao/teste.
 
 Le:    data/classification_data_clean.csv  (gerado pelo eda.ipynb)
 Grava: 3 modelos .pkl + metrics.csv + roc_curves_classification.png
@@ -28,6 +34,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score, classification_report, confusion_matrix,roc_curve, auc)
+
+# imblearn: pipeline compativel com samplers (so age no fit, nao no predict)
+# usado apenas no KNN para aplicar SMOTE
+from imblearn.pipeline import make_pipeline as imb_make_pipeline
+from imblearn.over_sampling import SMOTE
 
 # ----------------------------------------------------------
 # PATHS
@@ -69,16 +80,13 @@ print(f"\nTreino: {len(X_train)} obs | Teste: {len(X_test)} obs")
 # ------Logistic Regression ----------
 #
 # Hyperparameters base:
-#   C                 -> inverso da regularizacao L2. Menor = mais reg.
-#   penalty='l2'      -> regularizacao L2 (Ridge): penaliza coef^2
 #   solver='lbfgs'    -> optimizador adequado a datasets pequenos/medios
 #   max_iter=1000     -> maximo de iteracoes ate convergir
 #   class_weight='balanced' -> compensa o desbalanco 90/10
 lr_pipe = make_pipeline(
     StandardScaler(),
     LogisticRegression(
-        # penalty='l2' e o default; foi deprecated no sklearn 1.8.
-        # Para regularizacao L2 usa-se C (inverso da forca da reg.)
+
         solver='lbfgs',
         max_iter=1000,
         class_weight='balanced',
@@ -124,8 +132,14 @@ rf_grid = {
 #   weights      -> 'uniform' (todos pesam igual) ou 'distance' (mais proximos pesam mais)
 #   metric       -> formula de distancia (minkowski c/ p=2 = euclidiana)
 #   n_jobs=-1    -> paraleliza
-knn_pipe = make_pipeline(
-    StandardScaler(),  # KNN baseia-se em distancias -> scaling ESSENCIAL
+#
+# Nota: ao contrario da LR e do RF, o KNN nao suporta class_weight='balanced'.
+# Para compensar o desbalanco ~90/10, usamos SMOTE como primeiro step do
+# pipeline (via imblearn) — gera amostras sinteticas da classe minoritaria
+# apenas no fold de treino da CV, sem contaminar a validacao/teste.
+knn_pipe = imb_make_pipeline(
+    SMOTE(random_state=42),  # equilibra classes no treino (so age no fit)
+    StandardScaler(),        # KNN baseia-se em distancias -> scaling ESSENCIAL
     KNeighborsClassifier(
         metric='minkowski',
         p=2,

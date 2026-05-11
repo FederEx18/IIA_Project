@@ -7,6 +7,7 @@ seaborn>=0.12
 # Machine learning (Modulo 2)
 scikit-learn>=1.4
 joblib>=1.3
+imbalanced-learn>=0.12   # SMOTE no KNN (train_classification.py) e na comparação
 
 # Notebooks (eda.ipynb, dev.ipynb)
 jupyter>=1.0

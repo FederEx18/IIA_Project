@@ -70,13 +70,14 @@ Os módulos têm dependências de dados entre si. **Esta é a ordem correta**:
 [ data/processed_lisboa_porto_air_quality.csv ]   ← dataset original (versionado)
               │
               ▼
-   ┌──────────────────────────────────────────────┐
-   │ PASSO 1 — Module_2/eda.ipynb                 │
-   │  produz:                                     │
-   │   data/clean_air_quality.csv                 │
-   │   data/classification_data_clean.csv         │
-   │   data/regression_data_clean.csv             │
-   └──────────────────────────────────────────────┘
+   ┌──────────────────────────────────────────────────┐
+   │ PASSO 1 — Module_2/eda.ipynb                     │
+   │  produz:                                         │
+   │   data/clean_air_quality.csv                     │
+   │   data/classification_data_clean.csv             │
+   │   data/classification_data_clean_no_co.csv       │
+   │   data/regression_data_clean.csv                 │
+   └──────────────────────────────────────────────────┘
               │
    ┌──────────┴──────────┐
    ▼                     ▼
@@ -123,6 +124,10 @@ python Module_2/train_classification.py
 python Module_2/train_regression.py
 # ambos escrevem em Module_2/resultados/
 
+# (Opcional) iteração experimental: testa o efeito de remover CO e/ou aplicar
+# SMOTE em 4 combinações. Não toca em metrics.csv — grava em metrics_comparacao.csv.
+python Module_2/train_classification_comparacao.py
+
 # ============================================================
 # PASSO 3 — Módulo 3: relatório gerado por LLM
 # ============================================================
@@ -140,7 +145,8 @@ IIA_Project/
 ├── data/                                       Datasets (input + derivados)
 │   ├── processed_lisboa_porto_air_quality.csv  ⚙ INPUT original (versionado)
 │   ├── clean_air_quality.csv                   ✱ derivado: filtrado p/ Lisboa+Porto
-│   ├── classification_data_clean.csv           ✱ derivado: target = air_quality_good
+│   ├── classification_data_clean.csv           ✱ derivado: target = air_quality_good (com CO)
+│   ├── classification_data_clean_no_co.csv     ✱ derivado: idem mas sem CO (p/ comparacao)
 │   └── regression_data_clean.csv               ✱ derivado: target = NO2
 │
 ├── Module_1/                                   IA Simbólica
@@ -154,11 +160,14 @@ IIA_Project/
 │
 ├── Module_2/                                   Aprendizagem Automática
 │   ├── eda.ipynb                               EDA + geração dos datasets limpos
-│   ├── train_classification.py                 LogReg + RandomForest + KNN
+│   ├── train_classification.py                 LogReg + RandomForest + KNN (versão final)
+│   ├── train_classification_comparacao.py      iteração experimental: testa sem CO e com SMOTE
 │   ├── train_regression.py                     LinearReg + RandomForestRegressor
 │   └── resultados/                             ✱ OUTPUTS (gitignored, gerados localmente)
-│       ├── metrics.csv                         tabela com todas as métricas
+│       ├── metrics.csv                         métricas da versão final
+│       ├── metrics_comparacao.csv              ✱ métricas das 4 combinações experimentais
 │       ├── roc_curves_classification.png
+│       ├── roc_comparacao.png                  ✱ ROC das 4 combinações lado-a-lado
 │       ├── residuals_regression.png
 │       ├── logisticregression_classification.pkl
 │       ├── randomforest_classification.pkl
@@ -186,10 +195,11 @@ Legenda: `⚙` = ficheiro de input, `✱` = ficheiro gerado pelos scripts.
 
 | Módulo / Script | Lê (input) | Escreve (output) |
 |---|---|---|
-| **EDA** — `Module_2/eda.ipynb` | `data/processed_lisboa_porto_air_quality.csv` | `data/clean_air_quality.csv`<br>`data/classification_data_clean.csv`<br>`data/regression_data_clean.csv` |
+| **EDA** — `Module_2/eda.ipynb` | `data/processed_lisboa_porto_air_quality.csv` | `data/clean_air_quality.csv`<br>`data/classification_data_clean.csv`<br>`data/classification_data_clean_no_co.csv`<br>`data/regression_data_clean.csv` |
 | **M1 Regras** — `Module_1/rules_engine.py` | `data/clean_air_quality.csv`<br>`Module_1/regras.json` | `Module_1/resultados_alertas.csv` |
 | **M1 Bayes** — `Module_1/bayes_alerts.py` | `data/clean_air_quality.csv` | `Module_1/bayes_resultados.png`<br>+ accuracy/classification report (stdout) |
 | **M2 Classif.** — `Module_2/train_classification.py` | `data/classification_data_clean.csv` | `Module_2/resultados/metrics.csv`<br>`Module_2/resultados/roc_curves_classification.png`<br>`Module_2/resultados/{logisticregression,randomforest,knn}_classification.pkl` |
+| **M2 Comparação** — `Module_2/train_classification_comparacao.py` | `data/classification_data_clean.csv`<br>`data/classification_data_clean_no_co.csv` | `Module_2/resultados/metrics_comparacao.csv`<br>`Module_2/resultados/roc_comparacao.png` |
 | **M2 Regress.** — `Module_2/train_regression.py` | `data/regression_data_clean.csv` | `Module_2/resultados/metrics.csv` (atualiza)<br>`Module_2/resultados/residuals_regression.png`<br>`Module_2/resultados/{linearregression,randomforest}_regression.pkl` |
 | **M3 Geração** — `Module_3/gen_report.py` | `Module_1/resultados_alertas.csv`<br>`Module_1/regras.json`<br>`Module_2/resultados/metrics.csv` | `report.md` (caminho configurável com `--output`) |
 
@@ -241,15 +251,20 @@ Pipeline em três passos:
 
 1. **EDA** (`eda.ipynb`)
    - Análise exploratória, limpeza, redefinição da target `air_quality_good` (= `False` se `NO₂ ≥ 30 µg/m³` **e** `humidade ≥ 80 %`).
-   - Geração dos datasets prontos para treino (`classification_data_clean.csv`, `regression_data_clean.csv`).
+   - Geração dos datasets para treino: `classification_data_clean.csv` (com CO), `classification_data_clean_no_co.csv` (sem CO, para a iteração comparativa) e `regression_data_clean.csv`.
 
 2. **Classificação** (`train_classification.py`) — target: `air_quality_good`
-   - Algoritmos: **Logistic Regression** (linear, `StandardScaler`), **Random Forest** (não-linear, *ensemble*), **KNN** (distância, `StandardScaler`).
-   - `GridSearchCV` (cv=5, scoring=`f1_macro`) para tuning.
-   - `class_weight='balanced'` e `stratify=y` para o desbalanço ~90/10.
+   - Algoritmos: **Logistic Regression** (linear, `StandardScaler`, `class_weight='balanced'`), **Random Forest** (não-linear, *ensemble*, `class_weight='balanced'`), **KNN** (distância, `StandardScaler` + **SMOTE**).
+   - `GridSearchCV` (cv=5, scoring=`f1_macro`) e `stratify=y` no split para o desbalanço ~90/10.
+   - **Nota sobre o KNN**: o `KNeighborsClassifier` não suporta `class_weight`. Para compensar o desbalanço aplicou-se **SMOTE** (Chawla et al., 2002) como primeiro step do Pipeline via `imblearn` — o oversampling só ocorre no fold de treino da CV, evitando data leakage para a validação/teste.
    - Métricas registadas: accuracy, precision, recall, F1, ROC-AUC.
 
-3. **Regressão** (`train_regression.py`) — target: `NO2`
+3. **Comparação experimental** (`train_classification_comparacao.py`) — *opcional, iteração metodológica*
+   - Treina os 3 modelos em 4 combinações (com/sem CO × com/sem SMOTE) para isolar o efeito de cada mudança.
+   - Não toca em `metrics.csv`; grava em `metrics_comparacao.csv` e `roc_comparacao.png`.
+   - Confirmou que o CO é redundante (variação ≤ 0.02 em todas as métricas) e que o SMOTE só beneficia o KNN — daí a configuração final em `train_classification.py`.
+
+4. **Regressão** (`train_regression.py`) — target: `NO2`
    - Algoritmos: **Linear Regression**, **Random Forest Regressor** (com `GridSearchCV`).
    - Métricas registadas: R², MSE, MAE.
 
@@ -294,10 +309,12 @@ Porto;15/10/25 18:00;2;ALTO;R01_NO2_ALTO, R03_PM10_ALTO;Limitar trafego automove
 modelo,tarefa,accuracy,precision,recall,f1,roc_auc,r2,mse,mae
 LogisticRegression,classificacao,0.8304,0.3438,0.7586,0.4731,0.8533,,,
 RandomForest,classificacao,0.917,0.5641,0.7586,0.6471,0.9366,,,
-KNN,classificacao,0.9239,0.6842,0.4483,0.5417,0.9127,,,
+KNN,classificacao,0.8893,0.4717,0.8621,0.6098,0.934,,,
 LinearRegression,regressao,,,,,,0.7182,44.8023,5.1014
 RandomForest,regressao,,,,,,0.7231,44.0225,5.0737
 ```
+
+> Nota: a linha do KNN reflecte o modelo treinado com SMOTE (versão final). O recall sobe de 0.45 (sem SMOTE) para 0.86, à custa de precision (0.68 → 0.47). O F1 melhora (0.54 → 0.61).
 
 ### Módulo 3 — `report.md` (excerto)
 
@@ -366,6 +383,7 @@ Após a execução, os principais artefactos estão em:
 | pandas | 2.0 |
 | numpy | 1.24 |
 | scikit-learn | 1.4 |
+| imbalanced-learn | 0.12 (SMOTE no KNN) |
 | matplotlib | 3.7 |
 | seaborn | 0.12 |
 | anthropic | 0.40 (só Módulo 3) |
@@ -382,6 +400,8 @@ Após a execução, os principais artefactos estão em:
 | Caracteres estranhos no `resultados_alertas.csv` | Codificação | O ficheiro é UTF-8; abre com encoding correto (Excel: "Importar do texto", encoding `65001`) |
 | Notebook `eda.ipynb` falha em ler o CSV | Working directory errado | Abre o Jupyter a partir da **raiz do projeto** (`IIA_Project/`), não de `Module_2/` |
 | Demora muito no `GridSearchCV` | Grid grande (Random Forest) | Reduz `n_estimators` em `train_classification.py` para acelerar |
+| `ModuleNotFoundError: No module named 'imblearn'` | Falta o `imbalanced-learn` | `pip install imbalanced-learn` ou re-correr `pip install -r requirements.txt` |
+| `FileNotFoundError: data/classification_data_clean_no_co.csv` ao correr `train_classification_comparacao.py` | EDA antiga, sem a célula da variante sem CO | Re-correr `Module_2/eda.ipynb` (Run All) |
 
 ---
 
