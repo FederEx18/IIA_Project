@@ -15,6 +15,7 @@ Correr (a partir da raiz do projeto IIA_Project):
 
 import pandas as pd
 import joblib
+from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')  # nao abre janela; so grava ficheiro
 import matplotlib.pyplot as plt
@@ -29,11 +30,12 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 # ----------------------------------------------------------
 # PATHS
 # ----------------------------------------------------------
-DATA_CSV    = 'data/regression_data_clean.csv'
-METRICS_CSV = 'Module_2/resultados/metrics.csv'
-RES_PNG     = 'Module_2/resultados/residuals_regression.png'
-LR_PKL      = 'Module_2/resultados/linearregression_regression.pkl'
-RF_PKL      = 'Module_2/resultados/randomforest_regression.pkl'
+ROOT        = Path(__file__).resolve().parent.parent
+DATA_CSV    = ROOT / "data" / "regression_data_clean.csv"
+METRICS_CSV = ROOT / "Module_2" / "resultados" / "metrics.csv"
+RES_PNG     = ROOT / "Module_2" / "resultados" / "residuals_regression.png"
+LR_PKL      = ROOT / "Module_2" / "resultados" / "linearregression_regression.pkl"
+RF_PKL      = ROOT / "Module_2" / "resultados" / "randomforest_regression.pkl"
 
 TARGET = 'NO2'
 

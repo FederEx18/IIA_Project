@@ -21,6 +21,7 @@ Correr (a partir da raiz do projeto IIA_Project):
 
 import pandas as pd
 import matplotlib
+from pathlib import Path
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
@@ -39,10 +40,11 @@ from imblearn.over_sampling import SMOTE
 # ----------------------------------------------------------
 # PATHS
 # ----------------------------------------------------------
-CSV_COM_CO     = r'data/classification_data_clean.csv'
-CSV_SEM_CO     = r'data/classification_data_clean_no_co.csv'
-METRICS_OUT    = r'Module_2/resultados/metrics_comparacao.csv'
-ROC_OUT        = r'Module_2/resultados/roc_comparacao.png'
+ROOT           = Path(__file__).resolve().parent.parent
+CSV_COM_CO     = ROOT / "data" / "classification_data_clean.csv"
+CSV_SEM_CO     = ROOT / "data" / "classification_data_clean_no_co.csv"
+METRICS_OUT    = ROOT / "Module_2" / "resultados" / "metrics_comparacao.csv"
+ROC_OUT        = ROOT / "Module_2" / "resultados" / "roc_comparacao.png"
 TARGET         = 'air_quality_good'
 
 # ----------------------------------------------------------

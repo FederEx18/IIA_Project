@@ -22,6 +22,7 @@ Correr (a partir da raiz do projeto IIA_Project):
 
 import pandas as pd
 import joblib
+from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')  # nao abre janela; so grava ficheiro
 import matplotlib.pyplot as plt
@@ -43,12 +44,13 @@ from imblearn.over_sampling import SMOTE
 # ----------------------------------------------------------
 # PATHS
 # ----------------------------------------------------------
-DATA_CSV    = r'data/classification_data_clean.csv'
-METRICS_CSV = r'Module_2/resultados/metrics.csv'
-ROC_PNG     = r'Module_2/resultados/roc_curves_classification.png'
-LR_PKL      = r'Module_2/resultados/logisticregression_classification.pkl'
-RF_PKL      = r'Module_2/resultados/randomforest_classification.pkl'
-KNN_PKL     = r'Module_2/resultados/knn_classification.pkl'
+ROOT        = Path(__file__).resolve().parent.parent
+DATA_CSV    = ROOT / "data" / "classification_data_clean.csv"
+METRICS_CSV = ROOT / "Module_2" / "resultados" / "metrics.csv"
+ROC_PNG     = ROOT / "Module_2" / "resultados" / "roc_curves_classification.png"
+LR_PKL      = ROOT / "Module_2" / "resultados" / "logisticregression_classification.pkl"
+RF_PKL      = ROOT / "Module_2" / "resultados" / "randomforest_classification.pkl"
+KNN_PKL     = ROOT / "Module_2" / "resultados" / "knn_classification.pkl"
 
 TARGET = 'air_quality_good'
 
@@ -226,7 +228,7 @@ for nome, modelo, grid in modelos:
     print(f"Real ma    {cm[0,0]:>7d}   {cm[0,1]:>7d}")
     print(f"Real boa   {cm[1,0]:>7d}   {cm[1,1]:>7d}")
 
-    pkl_path = f'Module_2/resultados/{nome.lower()}_classification.pkl'
+    pkl_path = ROOT / "Module_2" / "resultados" / f"{nome.lower()}_classification.pkl"
     joblib.dump(final, pkl_path)
     print(f"\nModelo guardado em: {pkl_path}")
 
