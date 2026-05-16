@@ -21,7 +21,7 @@ em **Lisboa** e **Porto**.
 
 1. [Quick start](#1-quick-start)
 2. [Pipeline e ordem de execução](#2-pipeline-e-ordem-de-execução)
-3. [Estrutura do repositório](#3-estrutura-do-repositório)
+3. [Estrutura da entrega](#3-estrutura-da-entrega)
 4. [Inputs e outputs por módulo](#4-inputs-e-outputs-por-módulo)
 5. [Detalhe dos módulos](#5-detalhe-dos-módulos)
 6. [Exemplos de output](#6-exemplos-de-output)
@@ -51,14 +51,14 @@ source .venv/bin/activate
 # 3. Instalar dependências
 pip install -r requirements.txt
 
-# 4. (Opcional, só para o Módulo 3) chave da API Anthropic
-# Windows (PowerShell):
-$env:ANTHROPIC_API_KEY = "sk-ant-..."
-# macOS/Linux:
-export ANTHROPIC_API_KEY="sk-ant-..."
+# 4. (Só para o Módulo 3) token do Hugging Face
+# Criar ficheiro Module_3/.env com a linha:
+#   HF_TOKEN=hf_xxxxxxxxxxxxx
+# O token obtém-se em https://huggingface.co/settings/tokens
+# (permissão Fine-Grained com "Make calls to Inference Providers" ativa)
 ```
 
-Sem chave da API, o Módulo 3 corre em **modo offline** (template determinístico) — útil para correção sem credenciais.
+Sem o token o notebook do Módulo 3 não consegue chamar o modelo, mas o `Module_3/report_demo.md` já contém um output gerado previamente que serve como exemplo.
 
 ---
 
@@ -96,8 +96,8 @@ Os módulos têm dependências de dados entre si. **Esta é a ordem correta**:
                          ▼
               ┌──────────────────────────┐
               │ PASSO 3 — Módulo 3       │
-              │ gen_report.py            │
-              │ produz: report.md        │
+              │ gen_report.ipynb         │
+              │ produz: report_demo.md   │
               └──────────────────────────┘
 ```
 
@@ -131,63 +131,57 @@ python Module_2/train_classification_comparacao.py
 # ============================================================
 # PASSO 3 — Módulo 3: relatório gerado por LLM
 # ============================================================
-python Module_3/gen_report.py --variant critico_etico --output report.md
+# Antes de correr, criar Module_3/.env com:  HF_TOKEN=hf_xxxxxxxx
+jupyter notebook Module_3/gen_report.ipynb
+# Run All — a célula final escreve Module_3/report_demo.md
 ```
 
 > **Importante:** o PASSO 1 é obrigatório antes do PASSO 2 — sem `data/clean_air_quality.csv` os módulos 1 e 2 falham. O PASSO 3 lê os outputs dos módulos 1 e 2, pelo que tem de vir depois.
 
 ---
 
-## 3. Estrutura do repositório
+## 3. Estrutura da entrega
 
 ```
 IIA_Project/
-├── data/                                       Datasets (input + derivados)
-│   ├── processed_lisboa_porto_air_quality.csv  ⚙ INPUT original (versionado)
-│   ├── clean_air_quality.csv                   ✱ derivado: filtrado p/ Lisboa+Porto
-│   ├── classification_data_clean.csv           ✱ derivado: target = air_quality_good (com CO)
-│   ├── classification_data_clean_no_co.csv     ✱ derivado: idem mas sem CO (p/ comparacao)
-│   └── regression_data_clean.csv               ✱ derivado: target = NO2
+├── data/
+│   ├── processed_lisboa_porto_air_quality.csv
+│   ├── clean_air_quality.csv
+│   ├── classification_data_clean.csv
+│   ├── classification_data_clean_no_co.csv
+│   └── regression_data_clean.csv
 │
-├── Module_1/                                   IA Simbólica
-│   ├── rules_engine.py                         motor de 12 regras
-│   ├── regras.json                             base de conhecimento (Diretiva 2008/50/CE, OMS, IPMA)
-│   ├── regras.txt                              versão legível das regras
-│   ├── bayes_alerts.py                         Rede Bayesiana
-│   ├── dev.ipynb                               notebook de exploração
-│   ├── resultados_alertas.csv                  ✱ OUTPUT: alertas por observação
-│   └── bayes_resultados.png                    ✱ OUTPUT: matriz de confusão + confiança
+├── Module_1/
+│   ├── rules_engine.py
+│   ├── bayes_alerts.py
+│   ├── regras.json
+│   ├── regras.txt
+│   ├── dev.ipynb
+│   ├── resultados_alertas.csv
+│   └── bayes_resultados.png
 │
-├── Module_2/                                   Aprendizagem Automática
-│   ├── eda.ipynb                               EDA + geração dos datasets limpos
-│   ├── train_classification.py                 LogReg + RandomForest + KNN (versão final)
-│   ├── train_classification_comparacao.py      iteração experimental: testa sem CO e com SMOTE
-│   ├── train_regression.py                     LinearReg + RandomForestRegressor
-│   └── resultados/                             ✱ OUTPUTS (gitignored, gerados localmente)
-│       ├── metrics.csv                         métricas da versão final
-│       ├── metrics_comparacao.csv              ✱ métricas das 4 combinações experimentais
+├── Module_2/
+│   ├── eda.ipynb
+│   ├── train_classification.py
+│   ├── train_classification_comparacao.py
+│   ├── train_regression.py
+│   └── resultados/
+│       ├── metrics.csv
+│       ├── metrics_comparacao.csv
 │       ├── roc_curves_classification.png
-│       ├── roc_comparacao.png                  ✱ ROC das 4 combinações lado-a-lado
-│       ├── residuals_regression.png
-│       ├── logisticregression_classification.pkl
-│       ├── randomforest_classification.pkl
-│       ├── knn_classification.pkl
-│       ├── linearregression_regression.pkl
-│       └── randomforest_regression.pkl
+│       ├── roc_comparacao.png
+│       └── residuals_regression.png
 │
-├── Module_3/                                   IA Generativa
-│   ├── gen_report.py                           pipeline LLM (Anthropic Claude)
-│   ├── prompts.md                              3 variantes de prompt + análise comparativa
-│   └── dev.ipynb                               notebook de exploração
+├── Module_3/
+│   ├── gen_report.ipynb
+│   ├── report_utils.py
+│   ├── prompts.md
+│   └── report_demo.md
 │
-├── Relatorio_Final_IA.docx                     relatório final do projeto
-├── Enunciado_projeto_IA.docx                   enunciado da UC
-├── requirements.txt                            dependências Python
-├── .gitignore
-└── Readme.md                                   este ficheiro
+├── Relatorio_Final_IA.docx
+├── requirements.txt
+└── Readme.md
 ```
-
-Legenda: `⚙` = ficheiro de input, `✱` = ficheiro gerado pelos scripts.
 
 ---
 
@@ -201,7 +195,7 @@ Legenda: `⚙` = ficheiro de input, `✱` = ficheiro gerado pelos scripts.
 | **M2 Classif.** — `Module_2/train_classification.py` | `data/classification_data_clean.csv` | `Module_2/resultados/metrics.csv`<br>`Module_2/resultados/roc_curves_classification.png`<br>`Module_2/resultados/{logisticregression,randomforest,knn}_classification.pkl` |
 | **M2 Comparação** — `Module_2/train_classification_comparacao.py` | `data/classification_data_clean.csv`<br>`data/classification_data_clean_no_co.csv` | `Module_2/resultados/metrics_comparacao.csv`<br>`Module_2/resultados/roc_comparacao.png` |
 | **M2 Regress.** — `Module_2/train_regression.py` | `data/regression_data_clean.csv` | `Module_2/resultados/metrics.csv` (atualiza)<br>`Module_2/resultados/residuals_regression.png`<br>`Module_2/resultados/{linearregression,randomforest}_regression.pkl` |
-| **M3 Geração** — `Module_3/gen_report.py` | `Module_1/resultados_alertas.csv`<br>`Module_1/regras.json`<br>`Module_2/resultados/metrics.csv` | `report.md` (caminho configurável com `--output`) |
+| **M3 Geração** — `Module_3/gen_report.ipynb` | `Module_1/resultados_alertas.csv`<br>`Module_1/regras.json`<br>`Module_2/resultados/metrics.csv`<br>`Module_3/.env` (HF_TOKEN) | `Module_3/report_demo.md` |
 
 ---
 
@@ -272,11 +266,12 @@ Pipeline em três passos:
 
 Pipeline de *grounded generation*: o LLM recebe **apenas factos numéricos pré-calculados** pelos Módulos 1 e 2, nunca o dataset bruto. Isto restringe o modelo à formatação textual e à adaptação de linguagem, mitigando o risco de alucinação.
 
-```bash
-# Variantes de prompt (--variant)
-python Module_3/gen_report.py --variant baseline       --output report_baseline.md
-python Module_3/gen_report.py --variant estruturado    --output report_estruturado.md
-python Module_3/gen_report.py --variant critico_etico  --output report_critico.md   # default
+O pipeline está implementado no notebook `gen_report.ipynb`, que importa helpers de `report_utils.py` (estrutura `ReportFacts`, função `load_facts`, templates de prompt e função `generate_hf`). As três variantes de prompt são chamadas dentro do notebook:
+
+```python
+saida_baseline    = generate_hf(facts, "baseline",      call_hf)
+saida_estruturado = generate_hf(facts, "estruturado",   call_hf)
+saida_critico     = generate_hf(facts, "critico_etico", call_hf)
 ```
 
 | Variante | Audiência | Características |
@@ -287,8 +282,9 @@ python Module_3/gen_report.py --variant critico_etico  --output report_critico.m
 
 Análise comparativa completa em `Module_3/prompts.md`.
 
-**Modelo:** `claude-sonnet-4-5` (configurável em `gen_report.py`).
-**Fallback offline:** se `ANTHROPIC_API_KEY` não estiver definida ou o pacote `anthropic` não estiver instalado, o script gera um output determinístico a partir de um template — o pipeline corre na mesma.
+**Modelo:** `Qwen/Qwen2.5-72B-Instruct` via Hugging Face Inference API (configurável no setup do notebook, célula 2).
+**Temperatura:** 0.2 por defeito em `generate_hf` (baixa, para texto institucional reprodutível).
+**Autenticação:** o notebook lê `HF_TOKEN` de `Module_3/.env` (ficheiro não versionado — ver §1 Quick start).
 
 ---
 
@@ -353,8 +349,9 @@ python Module_1/bayes_alerts.py
 python Module_2/train_classification.py
 python Module_2/train_regression.py
 
-# 4. Módulo 3 (sem chave API → modo offline)
-python Module_3/gen_report.py --output report.md
+# 4. Módulo 3 (requer Module_3/.env com HF_TOKEN)
+jupyter nbconvert --to notebook --execute Module_3/gen_report.ipynb --output gen_report_executed.ipynb
+# alternativa: abrir o notebook no Jupyter e "Run All"
 ```
 
 Após a execução, os principais artefactos estão em:
@@ -364,7 +361,7 @@ Após a execução, os principais artefactos estão em:
 - `Module_2/resultados/metrics.csv` — métricas dos 5 modelos
 - `Module_2/resultados/roc_curves_classification.png` — Figura 2 do relatório
 - `Module_2/resultados/residuals_regression.png` — Figura 3 do relatório
-- `report.md` — relatório natural-language gerado pelo LLM
+- `Module_3/report_demo.md` — relatório natural-language gerado pelo LLM (variante crítico-ético)
 - `Relatorio_Final_IA.docx` — relatório final escrito (entrega académica)
 
 ---
@@ -386,7 +383,8 @@ Após a execução, os principais artefactos estão em:
 | imbalanced-learn | 0.12 (SMOTE no KNN) |
 | matplotlib | 3.7 |
 | seaborn | 0.12 |
-| anthropic | 0.40 (só Módulo 3) |
+| huggingface_hub | 0.24 (só Módulo 3) |
+| python-dotenv | 1.0 (só Módulo 3) |
 
 ---
 
@@ -396,7 +394,7 @@ Após a execução, os principais artefactos estão em:
 |---|---|---|
 | `FileNotFoundError: data/clean_air_quality.csv` | Não correste o PASSO 1 (eda.ipynb) | Executa o notebook do Módulo 2 antes dos restantes scripts |
 | `FileNotFoundError: Module_2/resultados/metrics.csv` ao correr Módulo 3 | Não correste o PASSO 2b | Corre `train_classification.py` e `train_regression.py` |
-| `ANTHROPIC_API_KEY not set` ao correr Módulo 3 | Variável de ambiente não definida | Define a variável (ver §1) ou aceita o output do modo offline |
+| `KeyError: 'HF_TOKEN'` ou erro 401/403 ao correr Módulo 3 | Token Hugging Face em falta ou sem permissões | Cria `Module_3/.env` com `HF_TOKEN=hf_xxx` (token com permissão "Make calls to Inference Providers" ativa — ver §1) |
 | Caracteres estranhos no `resultados_alertas.csv` | Codificação | O ficheiro é UTF-8; abre com encoding correto (Excel: "Importar do texto", encoding `65001`) |
 | Notebook `eda.ipynb` falha em ler o CSV | Working directory errado | Abre o Jupyter a partir da **raiz do projeto** (`IIA_Project/`), não de `Module_2/` |
 | Demora muito no `GridSearchCV` | Grid grande (Random Forest) | Reduz `n_estimators` em `train_classification.py` para acelerar |
@@ -407,7 +405,6 @@ Após a execução, os principais artefactos estão em:
 
 ## 10. Notas finais
 
-- A pasta `Module_2/resultados/` está em `.gitignore`. Os ficheiros são **gerados localmente** ao correr `train_classification.py` e `train_regression.py`. As 5 métricas reportadas no `Relatorio_Final_IA.docx` são reprodutíveis com `random_state=42`.
+- Os ficheiros em `Module_2/resultados/` são **gerados localmente** ao correr `train_classification.py` e `train_regression.py`. As 5 métricas reportadas no `Relatorio_Final_IA.docx` são reprodutíveis com `random_state=42`.
 - O ficheiro `data/processed_lisboa_porto_air_quality.csv` consolida três fontes: Lisboa (721 obs), Porto (721 obs) e a partição `UCI_Dataset` (9.326 obs, cidade italiana, 2004–2005). O `eda.ipynb` descarta esta última e mantém apenas Lisboa + Porto (1.442 obs) — justificação detalhada no relatório.
-- A pasta `codigo_prof/` está em `.gitignore` (material de apoio do docente, não distribuído).
-- Os ficheiros `Enunciado_projeto_IA.docx` e `Relatorio_Final_IA.docx` são, respetivamente, o enunciado da UC e o relatório final entregue.
+- O relatório final escrito está em `Relatorio_Final_IA.docx`.

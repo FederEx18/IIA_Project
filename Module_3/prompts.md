@@ -1,16 +1,16 @@
 # Módulo 3 — Engenharia de Prompts
 
 Este documento descreve as **três variantes de prompt** testadas em
-`gen_report.py`, os outputs respetivos sobre o mesmo conjunto de factos
+`gen_report.ipynb`, os outputs respetivos sobre o mesmo conjunto de factos
 (`Module_1/resultados_alertas.csv` + `Module_1/regras.json` +
 `Module_2/resultados/metrics.csv`), e uma análise comparativa.
 
 Todas as variantes recebem o **mesmo bloco de factos numéricos** (ver
-`ReportFacts` em `gen_report.py`). Diferem apenas nas instruções dadas
+`ReportFacts` em `gen_report.ipynb`). Diferem apenas nas instruções dadas
 ao modelo. O objetivo é avaliar como variações na engenharia do prompt
 afetam estrutura, clareza, fidelidade aos dados e adequação ao público.
 
-Modelo usado: `claude-sonnet-4-5` (temperatura padrão), via API Anthropic.
+Modelo usado: `Qwen/Qwen2.5-72B-Instruct` via Hugging Face Inference API. Temperatura 0.2 (baixa, para texto institucional reprodutível), max_tokens 1500.
 
 ---
 
