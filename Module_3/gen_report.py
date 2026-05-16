@@ -424,15 +424,15 @@ def main(argv: list | None = None) -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
- parser.parse_args(argv)
+#  parser.parse_args(argv)
 
-    facts = load_facts(args.alerts, args.rules, args.metrics)
-    text = generate(facts, args.variant)
+#     facts = load_facts(args.alerts, args.rules, args.metrics)
+#     text = generate(facts, args.variant)
 
-    args.output.write_text(text, encoding="utf-8")
-    print(f"Gerado: {args.output} ({len(text)} caracteres, variante={args.variant})")
-    return 0
+#     args.output.write_text(text, encoding="utf-8")
+#     print(f"Gerado: {args.output} ({len(text)} caracteres, variante={args.variant})")
+#     return 0
 
 
-if __name__ == "__main__":
-    sys.exit(main())
+# if __name__ == "__main__":
+#     sys.exit(main())

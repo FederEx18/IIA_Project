@@ -1,4 +1,4 @@
-__pycache__/
+*__pycache__/
 .venv/
 .claude/
 codigo_prof/
@@ -8,4 +8,8 @@ Module_2/resultados/*
 *.conflict_backup
 Relatorio_Final_IA.docx
 Enunciado_projeto_IA.docx
-*/.env
+.env
+**/.env
+~$*.docx
+.ipynb_checkpoints/
+*.pyc

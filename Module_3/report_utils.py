@@ -175,8 +175,8 @@ Factos:
 PROMPT_CRITICO_ETICO = """És um analista de políticas públicas a \
 redigir um relatório destinado simultaneamente a decisores municipais e \
 a comunicação ao cidadão. O texto deve ser claro, sem jargão técnico \
-excessivo, e ético: identifica explicitamente assimetrias de informação, \
-risco de viés e incerteza dos modelos.
+excessivo, em português de Portugal e ético: identifica explicitamente \
+assimetrias de informação, risco de viés e incerteza dos modelos.
 
 Estrutura obrigatória (cabeçalhos em Markdown):
 ## Resumo executivo (≤ 200 palavras)
