@@ -115,7 +115,7 @@ def load_facts(alerts_path: Path, rules_path: Path, metrics_path: Path) -> Repor
 
     # Determinar período a partir do datetime, se existir
     if "datetime" in alerts.columns:
-        dt = pd.to_datetime(alerts["datetime"], errors="coerce")
+        dt = pd.to_datetime(alerts["datetime"], format="%d/%m/%y %H:%M", errors="coerce")
         if dt.notna().any():
             period = f"{dt.min().date().isoformat()} a {dt.max().date().isoformat()}"
         else:
