@@ -131,7 +131,9 @@ def load_facts(alerts_path: Path, rules_path: Path, metrics_path: Path) -> Repor
         # Fallback: procurar coluna que contenha "level" ou "risco"
         candidates = [c for c in alerts.columns if "level" in c.lower() or "risco" in c.lower()]
         level_col = candidates[0] if candidates else None
-    alerts_by_level: Dict[str, int] = ({str(k): int(v) for k, v in alerts[level_col].fillna("NORMAL").value_counts().items()} if level_col else {})
+    alerts_by_level = (
+        alerts[level_col].fillna("NORMAL").value_counts().to_dict() if level_col else {}
+    )
 
     # Top regras disparadas
     rules_col = None
@@ -417,7 +419,20 @@ def main(argv: list | None = None) -> int:
 
     args.output.write_text(text, encoding="utf-8")
     print(f"Gerado: {args.output} ({len(text)} caracteres, variante={args.variant})")
-    return 0 
- 
+    return 0
+
+
 if __name__ == "__main__":
     sys.exit(main())
+#  parser.parse_args(argv)
+
+#     facts = load_facts(args.alerts, args.rules, args.metrics)
+#     text = generate(facts, args.variant)
+
+#     args.output.write_text(text, encoding="utf-8")
+#     print(f"Gerado: {args.output} ({len(text)} caracteres, variante={args.variant})")
+#     return 0
+
+
+# if __name__ == "__main__":
+#     sys.exit(main())

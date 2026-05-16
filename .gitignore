@@ -1,9 +1,15 @@
-__pycache__/
+*__pycache__/
 .venv/
 .claude/
 codigo_prof/
 *_output.*
-Module_2/resultados/
+Module_2/resultados/*
+!Module_2/resultados/.gitkeep
 *.conflict_backup
 Relatorio_Final_IA.docx
 Enunciado_projeto_IA.docx
+.env
+**/.env
+~$*.docx
+.ipynb_checkpoints/
+*.pyc

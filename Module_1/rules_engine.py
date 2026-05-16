@@ -7,10 +7,10 @@ from pathlib import Path
 #-------------------------------------------------------
 # OUTPUT fica sempre dentro de Module_1/ (resolvido a partir da localização
 # deste ficheiro), independentemente do CWD de quem corre o script.
-_HERE      = Path(__file__).resolve().parent
-INPUT_CSV  = "data/clean_air_quality.csv"
-RULES_JSON = "Module_1/regras.json"
-OUTPUT_CSV = str(_HERE / "resultados_alertas.csv")
+ROOT       = Path(__file__).resolve().parent.parent
+INPUT_CSV  = ROOT / "data" / "clean_air_quality.csv"
+RULES_JSON = ROOT / "Module_1" / "regras.json"
+OUTPUT_CSV = ROOT / "Module_1" / "resultados_alertas.csv"
 
 
 # -------------------------------------------------------

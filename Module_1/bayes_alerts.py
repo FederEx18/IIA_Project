@@ -27,7 +27,7 @@ Por isso:
 - A rede aprende padrões reais:
     PM2.5 alto coincide com NO2 alto (ambos do tráfego)
     Outono ameno coincide com humidade alta
-- As métricas ficam mais baixas (mas honestas) — a rede adivinha,
+- As métricas ficam mais baixas (mas reais e honestas) — a rede adivinha,
   não copia.
 
 Tudo explicado no notebook (markdown "Diagnóstico e plano de limpeza"
@@ -43,9 +43,9 @@ from sklearn.metrics import classification_report, confusion_matrix, ConfusionMa
 # ----------------------------------------------------------
 # PATHS
 # ----------------------------------------------
-_HERE      = Path(__file__).resolve().parent
-INPUT_CSV  = "data/clean_air_quality.csv"
-OUTPUT_PNG = str(_HERE / "bayes_resultados.png")
+ROOT       = Path(__file__).resolve().parent.parent
+INPUT_CSV  = ROOT / "data" / "clean_air_quality.csv"
+OUTPUT_PNG = ROOT / "Module_1" / "bayes_resultados.png"
 
 
 # ----------------------------------------------------------
