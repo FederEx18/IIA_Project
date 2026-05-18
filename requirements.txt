@@ -14,3 +14,4 @@ jupyter>=1.0
 ipykernel>=6.25
 python-dotenv>=1.2.2
 huggingface_hub>=1.14
+markdown-pdf>=1.13.1
