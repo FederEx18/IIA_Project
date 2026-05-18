@@ -124,7 +124,7 @@ rocs_por_combo = {}   # {combo_nome: {modelo_nome: (fpr, tpr, auc)}}
 
 for combo in COMBOS:
     print(f"\n{'#'*60}")
-    print(f"#  COMBO: {combo['nome']}   (csv={combo['csv'].split('/')[-1]}, smote={combo['use_smote']})")
+    print(f"#  COMBO: {combo['nome']}   (csv={str(combo['csv']).split('/')[-1]}, smote={combo['use_smote']})")
     print('#'*60)
 
     df = pd.read_csv(combo['csv'])
